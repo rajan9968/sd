@@ -435,7 +435,7 @@ export default function Home() {
                                 {businessText || "Loading content..."}
                             </p>
                         </div>
-                        <div className="row g-5">
+                        <div className="row g-5 custom-row-css">
                             {businesses.map((business, index) => (
                                 <div key={business.id} className="col-md-6 col-lg-3 col-6">
                                     <Link
@@ -539,7 +539,7 @@ export default function Home() {
                                         {sustainabilityData?.heading ||
                                             "Lorem ipsum dolor sit amet, consectetuer adipiscing ipsum"}
                                     </h4>
-                                    <p>
+                                    <p className="sus-para">
                                         {sustainabilityData?.content ||
                                             "Lorem ipsum dolor sit amet, consectetuer adipiscing ipsum dolor sit amet..."}
                                     </p>
@@ -658,7 +658,7 @@ export default function Home() {
                                     <SwiperSlide key={index}>
                                         <div className="history-box d-flex">
                                             <div className="history-image" style={{ maxWidth: "54%" }}>
-                                                <img src={slide.icon} alt={slide.location} style={{ maxWidth: "100%" }} />
+                                                <img src={slide.icon} className="custom-size-image" alt={slide.location} style={{ maxWidth: "100%" }} />
                                             </div>
                                             <div>
                                                 <div className="history-content">
@@ -781,7 +781,7 @@ export default function Home() {
                                     <SwiperSlide key={index}>
                                         <div className="news-box">
                                             <div className="new-image">
-                                                <img src={item.img} className="img-fluid" style={{ objectFit: "cover", height: "25em" }} alt="news" />
+                                                <img src={item.img} className="img-fluid home-all-card" style={{ objectFit: "cover", height: "25em" }} alt="news" />
                                             </div>
                                             <div className="news-content">
                                                 <p className="news-title">

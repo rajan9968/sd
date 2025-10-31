@@ -112,7 +112,7 @@ export default function Footer() {
                                         <a href="mailto:info@dattainfra.com">info@dattainfra.com</a>
                                     </li>
                                 </ul>
-                                <ul className="social-icons d-flex align-items-center justify-content-center gap-1 mt-4">
+                                <ul className="social-icons d-flex align-items-center justify-content-cente gap-1 mt-4">
                                     <li>
                                         <i className="fa fa-facebook-f custom-fa" />
                                     </li>

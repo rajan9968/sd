@@ -1,11 +1,31 @@
+/* 110% */
 @media (min-width: 1681px) and (max-width: 1919px) {
     .card-custom h3 {
         padding: 0 31px;
     }
 
+    .card-custom p {
+        padding: 0;
+    }
+
+    .card-image {
+        margin: 2.3em 0;
+        max-width: 64%;
+        object-fit: cover;
+        height: 23%;
+    }
+
+    .card-custom {
+        height: 90%;
+    }
+
     #history-carousel {
         padding: 20px;
-        bottom: -20%;
+        bottom: -23%;
+    }
+
+    .btn-design {
+        width: 14%;
     }
 
     #history-carousel .swiper-button-next {
@@ -28,13 +48,28 @@
     }
 }
 
+/* 125% */
+
 @media (min-width: 1441px) and (max-width: 1600px) {
+    .card-custom p {
+        padding: 0;
+    }
+
+    .stats-container {
+        margin-bottom: 3em;
+    }
+
     .slide-content {
         padding: 0px 7.4%;
     }
 
     .stat-item {
-        padding-bottom: 37px;
+        padding-bottom: 17px;
+    }
+
+    .custom-row-css {
+        --bs-gutter-y: unset !important;
+        --bs-gutter-x: unset !important;
     }
 
     .slide-title {
@@ -81,12 +116,12 @@
     }
 
     .content-text h3 {
-        font-size: 3.99em;
+        font-size: 3.4em;
     }
 
     #history-carousel {
         padding: 20px;
-        bottom: -12%;
+        bottom: -18%;
     }
 
     .history-box {
@@ -94,8 +129,16 @@
         width: 97%;
     }
 
+    .swiper-pagination-bullet {
+        height: 5px;
+    }
+
     .history-box .history-content p {
         font-size: 0.9em;
+    }
+
+    .home-all-card {
+        height: 25em !important;
     }
 
     #history-carousel .swiper-button-next {
@@ -156,8 +199,12 @@
     }
 }
 
-
+/* 150% */
 @media (min-width: 1024px) and (max-width: 1360px) {
+    .stats-container {
+        margin-bottom: 2em;
+    }
+
     .trusted-section .swiper-wrapper {
         align-items: center;
     }
@@ -179,7 +226,11 @@
     }
 
     .stat-item {
-        padding-bottom: 37px;
+        padding-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 0.8em;
     }
 
     .slide-title {
@@ -188,7 +239,17 @@
     }
 
     .stat-number {
-        font-size: 3em;
+        font-size: 2.2em;
+    }
+
+    .power-content h4 {
+        font-size: 1.3em;
+    }
+
+    .section-text,
+    .sus-para,
+    .content-text p {
+        font-size: 0.8em;
     }
 
     .slider-nav {
@@ -252,12 +313,16 @@
     }
 
     .content-text h3 {
-        font-size: 2.99em;
+        font-size: 2.4em;
+    }
+
+    .custom-size-image {
+        height: 83px;
     }
 
     #history-carousel {
         padding: 14px;
-        bottom: -5%;
+        bottom: -15%;
         right: -32px;
     }
 
@@ -283,21 +348,35 @@
     }
 
     #history-carousel .swiper-button-next {
-        right: -0.5% !important;
+        right: -1% !important;
         top: 92% !important;
         zoom: 79%;
     }
 
     #history-carousel .swiper-button-prev {
         /* top: 38%; */
-        left: 95.5% !important;
-        zoom: 73%;
+        left: 95.7% !important;
+        zoom: 78%;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 8%;
+        padding: 4px;
+        height: 27px;
+    }
+
+    .home-all-card {
+        height: 23em !important;
+    }
+
+    .swiper-pagination-bullet {
+        height: 5px;
     }
 
     #history-carousel .swiper-button-prev,
     #history-carousel .swiper-button-next {
         width: 63px !important;
-        height: 69px !important;
+        height: 75px !important;
     }
 
     .btn-design {
@@ -694,6 +773,29 @@
 }
 
 @media only screen and (max-width: 480px) {
+    .top-banner {
+        height: 29em;
+    }
+
+    .trusted-section {
+        position: relative;
+    }
+
+    .divider {
+        height: 144px;
+        width: 2px;
+        margin-left: 20px;
+        rotate: 90deg;
+        position: absolute;
+        top: -6%;
+        right: 49%;
+    }
+
+    .slide {
+        background-position: left;
+        height: 87%;
+    }
+
     .logo img {
         max-width: 55%;
     }
@@ -867,6 +969,6 @@
 
 @media (min-width: 321px) and (max-width: 424px) {
     .news-content .btn-design-new {
-    width: 50%;
-}
+        width: 50%;
+    }
 }

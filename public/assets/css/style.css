@@ -298,8 +298,12 @@ a {
   font-weight: bold;
   margin-bottom: 10rem;
   line-height: 1.2;
-  max-width: 20em;
+  max-width: 17em;
   animation: fadeInUp 1s ease-out;
+}
+
+.home-all-card {
+  height: 35em !important;
 }
 
 .stats-container {
@@ -558,7 +562,7 @@ a {
 }
 
 .content-text h3 {
-  font-size: 4.99em;
+  font-size: 4em;
   font-weight: 500;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -568,6 +572,7 @@ a {
   font-size: 16px;
   line-height: 1.8;
   color: #f1f1f1;
+  height: 4em;
 }
 
 #history-carousel {
@@ -578,12 +583,16 @@ a {
   margin: 0 auto;
   max-width: 78%;
   position: absolute;
-  bottom: -20%;
+  bottom: -32%;
   right: -2%;
   z-index: 2;
   display: flex;
   gap: 20px;
   overflow: hidden;
+}
+
+.custom-size-image {
+  height: 109px;
 }
 
 .history-box {
