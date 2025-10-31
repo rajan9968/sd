@@ -195,7 +195,7 @@ export default function About() {
                     />
                     <div className="container-fluid plr">
                         <div className="about-banner-caption text-center text-white">
-                            <h2 className="text-left">Who we are
+                            <h2 className="text-start">Who we are
                                 <br></br>
                                 <span>{banner.subHeading}</span>
                             </h2>
@@ -254,10 +254,10 @@ export default function About() {
                         <div className="row g-5">
                             {purposes.map((item) => (
                                 <div className="col-md-6 col-lg-4 col-6" key={item.id}>
-                                    <div className="card-custom text-center">
+                                    <div className="card-custom about-card-second text-center">
                                         <img
                                             src={getIcon(item.purpose_type)}
-                                            className="card-image mb-3"
+                                            className="card-image about-custom-car-image mb-3"
                                             alt={item.purpose_type}
                                         />
                                         <h3>{item.purpose_type}</h3>
@@ -315,7 +315,7 @@ export default function About() {
                                                 onMouseLeave={() => setHoveredId(null)}
                                             >
                                                 <div
-                                                    className="card-custom"
+                                                    className="card-custom about-core-card-h"
                                                     style={{
                                                         backgroundImage:
                                                             hoveredId === item.id && bannerImg
@@ -330,7 +330,7 @@ export default function About() {
                                                             hoveredId === item.id ? "brightness(1.1)" : "brightness(1)",
                                                     }}
                                                 >
-                                                    <img src={iconSrc} className="card-image" alt={item.sub_heading} />
+                                                    <img src={iconSrc} className="card-image about-core-icon" alt={item.sub_heading} />
                                                     <h3>{item.sub_heading}</h3>
                                                     <p>{item.content}</p>
                                                 </div>
@@ -416,8 +416,8 @@ export default function About() {
                                                 >
                                                     <FaLocationDot className="text-color mt-1 fs-5" />
                                                     <div>
-                                                        <span className="fw-semibold">{loc.state}</span>
-                                                        <p className="mb-0 text-muted small">{loc.location}</p>
+                                                        <span className="fw-semibold about-state">{loc.state}</span>
+                                                        <p className="mb-0 text-muted about-location">{loc.location}</p>
                                                     </div>
                                                 </li>
                                             ))

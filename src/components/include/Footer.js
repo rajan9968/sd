@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="row">
                         <div className="col-lg-8">
                             <div className="logo-footer mb-5">
-                                <img src="assets/images/footer-logo.png" alt="" srcSet="" />
+                                <img src="/assets/images/footer-logo.png" alt="" srcSet="" />
                             </div>
                             <div className="footer-menu d-flex">
                                 <div>
@@ -104,11 +104,11 @@ export default function Footer() {
                                         122002, Haryana
                                     </li>
                                     <li>
-                                        <img src="assets/images/phone-icon.png" alt="" srcSet="" />
+                                        <img src="/assets/images/phone-icon.png" alt="" srcSet="" />
                                         <a href="tel:+">+91-124-448-8852</a>
                                     </li>
                                     <li>
-                                        <img src="assets/images/mail-icon.png" alt="" srcSet="" />
+                                        <img src="/assets/images/mail-icon.png" alt="" srcSet="" />
                                         <a href="mailto:info@dattainfra.com">info@dattainfra.com</a>
                                     </li>
                                 </ul>

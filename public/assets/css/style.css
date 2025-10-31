@@ -1283,6 +1283,11 @@ header.shrink {
   font-size: 4em;
   font-weight: 700;
   color: #FFFFFF;
+  line-height: 0.9;
+}
+
+.about-banner-caption span {
+  font-size: 0.5em;
 }
 
 .about-banner-caption ul {
@@ -1335,6 +1340,28 @@ header.shrink {
 
 .copy-section {
   padding-top: 2em;
+}
+
+.about-custom-car-image {
+  max-width: 30%;
+  height: 28%;
+}
+
+.about-card-second {
+  height: 26em !important;
+}
+
+.about-core-icon {
+  max-width: 33%;
+}
+
+.about-core-card-h {
+  height: 28em;
+}
+
+.about-state,
+.about-location {
+  font-size: 1.3em;
 }
 
 .copy-list {

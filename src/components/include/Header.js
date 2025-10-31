@@ -53,13 +53,26 @@ export default function Header() {
 
                         {/* Navigation */}
                         <div className="col-lg-8">
-                            <img
+                            <button
+                                type="button"
+                                onClick={handleMainOffcanvasShow}
+                                aria-label="Open navigation menu"
+                                style={{
+                                    background: "none",
+                                    border: "none",
+                                    padding: 0,
+                                    cursor: "pointer",
+                                }}
+                            >
+                                <img className="navOpenBtn" src="/assets/images/menu-icon.jpg" alt="" />
+                            </button>
+                            {/* <img
                                 src="assets/images/menu-icon.jpg"
                                 className="navOpenBtn"
                                 alt="Open menu"
                                 role="button"
                                 tabIndex={0}
-                            />
+                            /> */}
                             <div className="d-flex justify-content-end align-items-center h-100">
                                 <ul className="nav-links">
                                     <i className="uil uil-times navCloseBtn" />

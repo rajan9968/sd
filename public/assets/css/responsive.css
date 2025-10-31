@@ -1,5 +1,17 @@
 /* 110% */
 @media (min-width: 1681px) and (max-width: 1919px) {
+    .about-card-second {
+        height: 26em !important;
+    }
+
+    .about-core-icon {
+        max-width: 33%;
+    }
+
+    .about-core-card-h {
+        height: 24em !important;
+    }
+
     .card-custom h3 {
         padding: 0 31px;
     }
@@ -53,6 +65,22 @@
 @media (min-width: 1441px) and (max-width: 1600px) {
     .card-custom p {
         padding: 0;
+    }
+
+    .about-banner-caption h2 {
+        font-size: 3em;
+    }
+
+    .about-card-second {
+        height: 26em !important;
+    }
+
+    .about-core-icon {
+        max-width: 33%;
+    }
+
+    .about-core-card-h {
+        height: 24em !important;
     }
 
     .stats-container {
@@ -777,8 +805,37 @@
         height: 29em;
     }
 
+    .power-img img {
+        margin-bottom: 1em;
+    }
+
     .trusted-section {
         position: relative;
+    }
+
+    .home-all-card {
+        height: 27em !important;
+    }
+
+    #new-carousel .swiper-button-prev,
+    #new-carousel .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 28%;
+        left: 37%;
+        height: 29px;
+    }
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 37px !important;
+        height: 48px !important;
+    }
+
+    #history-carousel .swiper-button-prev {
+        left: 89.6% !important;
     }
 
     .divider {
@@ -909,7 +966,7 @@
     }
 
     .content-text h3 {
-        font-size: 2em;
+        font-size: 1.6em;
     }
 
     .history-box {
@@ -917,8 +974,10 @@
     }
 
     #history-carousel {
-        bottom: -2%;
+        bottom: -38%;
         padding: 17px;
+        max-width: 100%;
+        right: -9%;
     }
 
     #history-carousel .owl-nav button.owl-next span,
@@ -934,10 +993,9 @@
     }
 
     .btn-design {
-        top: 66%;
-        zoom: 69%;
-        left: 2%;
-        width: 35%;
+        top: 95%;
+        left: 9%;
+        width: 63%;
     }
 
     .btn-design-new {
@@ -965,6 +1023,16 @@
     .social-icons {
         justify-content: unset !important;
     }
+
+    .offcanvas-body {
+        zoom: 82%;
+    }
+
+    /* .submenu-off {
+        width: 68% !important;
+    } */
+
+
 }
 
 @media (min-width: 321px) and (max-width: 424px) {
