@@ -942,6 +942,79 @@
 
 /* port  */
 
+@media (min-width: 575px) and (max-width: 768px) {}
+
+@media (min-width: 570px) and (max-width: 575px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 53px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 570px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 52px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 550px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 50px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 528px) and (max-width: 540px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 49px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 514px) and (max-width: 528px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 46px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 502px) and (max-width: 513px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 46px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 501px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 45px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 490px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 44px !important;
+        height: 67px !important;
+    }
+}
 
 
 @media (min-width: 480px) and (max-width: 574px) {
@@ -972,11 +1045,11 @@
         height: 29px;
     }
 
-    #history-carousel .swiper-button-prev,
+    /* #history-carousel .swiper-button-prev,
     #history-carousel .swiper-button-next {
         width: 42px !important;
         height: 48px !important;
-    }
+    } */
 
     #history-carousel .swiper-button-prev {
         left: 89.6% !important;
@@ -1026,7 +1099,7 @@
     }
 
     header.shrink {
-        padding: 1.8em 0;
+        padding: 2.5em 0;
     }
 
     .slider-container {
@@ -1095,8 +1168,8 @@
     }
 
     .powering-progress .btn-design-new {
-        padding: 6px;
-        width: 62%;
+        padding: 11px;
+        width: 37%;
         font-size: 0.8em;
         align-items: center;
     }
@@ -1106,19 +1179,20 @@
     }
 
     .content-text {
-        max-width: 100%;
+        max-width: 85%;
+        zoom: 96%;
     }
 
     .content-text h3 {
-        font-size: 1.6em;
+        font-size: 1.7em;
     }
 
     .history-box {
-        zoom: 53%;
+        zoom: 88%;
     }
 
     #history-carousel {
-        bottom: -38%;
+        bottom: -40%;
         padding: 17px;
         max-width: 100%;
         right: -9%;
@@ -1137,9 +1211,9 @@
     }
 
     .btn-design {
-        top: 95%;
+        top: 84%;
         left: 9%;
-        width: 63%;
+        width: 53%;
     }
 
     .btn-design-new {
