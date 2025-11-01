@@ -197,7 +197,7 @@ export default function MediaResources() {
                                 <div className="row">
                                     {videos.length > 0 ? (
                                         videos.map((item) => (
-                                            <div className="col-lg-4 col-md-6" key={item.id}>
+                                            <div className="col-lg-4 mb-3 col-md-6" key={item.id}>
                                                 <div className="team-card shadow rounded bg-light h-100 cursor-pointer">
                                                     <a
                                                         href={item.video_url}

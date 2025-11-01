@@ -180,7 +180,7 @@ export default function PreDevelopment() {
                         </div>
                         <div className="row">
                             {ourApproach.map((item, index) => (
-                                <div className="col-lg-4" key={index}>
+                                <div className="col-lg-4 mb-3" key={index}>
                                     <div className="news-box rounded">
                                         <div className="new-image">
                                             <img
