@@ -954,6 +954,13 @@
     .custom-css-in-blog {
         height: unset !important;
     }
+
+    .contact-submit-btn {
+        position: unset;
+    }
+        .contect-form {
+            padding: 0 0em;
+        }
 }
 
 
@@ -1373,6 +1380,16 @@
         left: unset;
         position: unset;
     }
+
+    .work-with-us-card {
+        zoom: 80%;
+        right: 6px;
+        top: 39%;
+    }
+
+    .work-with-us-card .btn-design {
+        width: 78%;
+    }
 }
 
 /* port  */
@@ -1756,6 +1773,16 @@
         left: unset;
         position: unset;
     }
+
+    .work-with-us-card {
+        zoom: 59%;
+        right: 6px;
+        top: 39%;
+    }
+
+    .work-with-us-card .btn-design {
+        width: 78%;
+    }
 }
 
 /* @media (min-width: 570px) and (max-width: 575px) {
@@ -1834,6 +1861,16 @@
 @media (min-width: 480px) and (max-width: 574px) {
     .slider-container {
         height: 34em;
+    }
+
+    .work-with-us-card {
+        zoom: 59%;
+        right: 6px;
+        top: 39%;
+    }
+
+    .work-with-us-card .btn-design {
+        width: 78%;
     }
 
     .top-banner {
@@ -2155,6 +2192,16 @@
 @media only screen and (max-width: 480px) {
     .top-banner {
         height: 29em;
+    }
+
+    .work-with-us-card {
+        zoom: 59%;
+        right: 6px;
+        top: 39%;
+    }
+
+    .work-with-us-card .btn-design {
+        width: 78%;
     }
 
     .power-img img {
@@ -2678,6 +2725,12 @@
         left: unset;
         position: unset;
     }
+
+    .work-with-us-card {
+        zoom: 48%;
+        right: 6px;
+        top: 39%;
+    }
 }
 
 /* 321 to 365  */
@@ -2709,6 +2762,12 @@
 @media (min-width: 320px) and (max-width: 365px) {
     .news-content .btn-design-new {
         width: 50%;
+    }
+
+    .work-with-us-card {
+        zoom: 48%;
+        right: 6px;
+        top: 39%;
     }
 
     .section-title {

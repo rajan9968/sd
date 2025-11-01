@@ -98,7 +98,7 @@ const Careers = () => {
                             <h2 className="section-title">Why Join Datta Infra?</h2>
                         </div>
 
-                        <div className="row" id="new-carousel" style={{ position: "relative" }}>
+                        <div className="row px-4" id="new-carousel" style={{ position: "relative" }}>
                             <div className="swiper-button-prev"></div>
                             <div className="swiper-button-next"></div>
 
