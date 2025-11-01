@@ -547,7 +547,7 @@ export default function Home() {
 
                                 <div className="d-flex align-items-end justify-content-between">
                                     <div className="btn-design-new mt-3">
-                                        <a href="#" className="custom-btn">
+                                        <a href="/business/pre-development" className="custom-btn">
                                             Read More
                                         </a>
                                         <svg
@@ -614,7 +614,7 @@ export default function Home() {
                         </div>
 
                         <div className="btn-design d-flex justify-content-center align-items-center gap-2">
-                            <a href="/portfolio" className="custom-btn">
+                            <a href="/culture" className="custom-btn">
                                 View Our Portfolio
                             </a>
                             <svg
@@ -693,7 +693,7 @@ export default function Home() {
                             </p>
                             <div className="d-flex justify-content-center align-items-center mt-5 mb-4">
                                 <div className="btn-design-new d-flex align-items-center">
-                                    <a href="#" className="custom-btn">
+                                    <a href="/careers" className="custom-btn">
                                         Explore Opportunities
                                     </a>
                                     <svg
@@ -832,7 +832,7 @@ export default function Home() {
                                 <div className="d-flex justify-content-center gap-3 align-items-center text-center">
                                     <h2>Ready to connect?</h2>
                                     <div className="btn-design-new">
-                                        <a href="" className="custom-btn">
+                                        <a href="/contact-us" className="custom-btn">
                                             Contact Us
                                         </a>
                                         <svg

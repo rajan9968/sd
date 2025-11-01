@@ -230,7 +230,7 @@ export default function Culture() {
                     </div>
                 </section>
                 <section
-                    className="our-portfolio mb-4 bg-white"
+                    className="our-portfolio cul-pot mb-4 bg-white"
                     style={{
                         background: initiatives.length
                             ? `url(${initiatives[activeIndex].bgImage}) no-repeat center center/cover`
@@ -244,7 +244,7 @@ export default function Culture() {
                 >
                     <div className="container-fluid">
                         {/* Dynamic content-text */}
-                        <div className="content-text">
+                        <div className="content-text cul-sec">
                             <h3>
                                 {initiatives[activeIndex]?.title} <br />
                             </h3>
@@ -294,8 +294,10 @@ export default function Culture() {
                             </Swiper>
 
                             {/* Navigation Buttons */}
-                            <div className="swiper-button-prev"></div>
-                            <div className="swiper-button-next"></div>
+                            <div className="custom-ali">
+                                <div className="swiper-button-prev"></div>
+                                <div className="swiper-button-next"></div>
+                            </div>
                         </div>
                     </div>
                 </section>
