@@ -940,11 +940,809 @@
 
 }
 
+/* 676 7686  */
+/* @media (min-width: 761px) and (max-width: 768px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 95px !important;
+        height: 89px !important;
+        zoom: 79%;
+        margin-right: 16px;
+        margin-left: -18px;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 760px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 94px !important;
+        height: 89px !important;
+        zoom: 79%;
+        margin-right: 16px;
+        margin-left: -18px;
+    }
+}
+
+@media (min-width: 745px) and (max-width: 750px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 92px !important;
+        height: 89px !important;
+        zoom: 79%;
+        margin-right: 16px;
+        margin-left: -18px;
+    }
+}
+
+@media (min-width: 725px) and (max-width: 745px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 90px !important;
+        height: 89px !important;
+        zoom: 79%;
+        margin-right: 16px;
+        margin-left: -18px;
+    }
+}
+
+@media (min-width: 711px) and (max-width: 724px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 88px !important;
+        height: 89px !important;
+        zoom: 79%;
+        margin-right: 16px;
+        margin-left: -18px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 710px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 86px !important;
+        height: 89px !important;
+        zoom: 79%;
+        margin-right: 16px;
+        margin-left: -18px;
+    }
+}
+
+@media (min-width: 682px) and (max-width: 700px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 85px !important;
+        height: 89px !important;
+        zoom: 79%;
+        margin-right: 16px;
+        margin-left: -18px;
+    }
+}
+
+@media (min-width: 677px) and (max-width: 681px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 64px !important;
+        height: 67px !important;
+    }
+} */
+
+@media (min-width: 677px) and (max-width: 768px) {
+    .slider-nav {
+        display: none;
+    }
+
+    .slider-container {
+        height: 34em;
+    }
+
+    .top-banner {
+        height: 29em;
+    }
+
+    .custom-view {
+        min-height: 39em !important;
+    }
+
+    .power-img img {
+        margin-bottom: 1em;
+    }
+
+    .trusted-section {
+        position: relative;
+    }
+
+    .home-all-card {
+        height: 27em !important;
+    }
+
+    #new-carousel .swiper-button-prev,
+    #new-carousel .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 28%;
+        left: 37%;
+        height: 29px;
+    }
+
+    /* #history-carousel .swiper-button-prev,
+        #history-carousel .swiper-button-next {
+            width: 42px !important;
+            height: 48px !important;
+        } */
+
+    #history-carousel .swiper-button-prev {
+        left: 89.6% !important;
+    }
+
+    .divider {
+        height: 144px;
+        width: 2px;
+        margin-left: 20px;
+        rotate: 90deg;
+        position: absolute;
+        top: -6%;
+        right: 49%;
+    }
+
+    .slide {
+        background-position: left;
+        height: 87%;
+    }
+
+    .logo img {
+        max-width: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        margin-top: 0 !important;
+        padding: 15px 11px;
+        justify-content: space-between;
+    }
+
+    .section-text {
+        padding: 0 11px;
+    }
+
+    .card-image {
+        max-width: 34%;
+    }
+
+    .our-business .row {
+        --bs-gutter-y: unset;
+        --bs-gutter-x: unset;
+    }
+
+    header.shrink .nav {
+        margin-top: 0em !important;
+    }
+
+    header.shrink {
+        padding: 2.5em 0;
+    }
+
+    .slider-container {
+        height: 70vh;
+    }
+
+    .slide-content {
+        zoom: 77%;
+    }
+
+    .slide-title {
+        margin-bottom: 2rem;
+    }
+
+    .stats-container {
+        flex-wrap: unset;
+    }
+
+    .plr {
+        padding: 0.688em;
+    }
+
+    .footer-menu {
+        display: unset !important;
+    }
+
+    .footer-menu h5 {
+
+        margin-top: 2em;
+    }
+
+    .footer-menu.contact {
+        margin-top: 0em;
+        padding-left: unset;
+    }
+
+    .card-custom h3 {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .card-custom p {
+        padding: 0;
+        font-size: 1em;
+    }
+
+    .card-custom {
+        padding: 5px;
+        height: 90%;
+
+    }
+
+    .card-image {
+        max-width: 40%;
+        object-fit: cover;
+        max-height: 23%;
+        margin: 1em 0;
+    }
+
+    .group-icon {
+        text-align: end;
+    }
+
+    .group-icon img {
+        max-width: 70%;
+    }
+
+    .powering-progress .btn-design-new {
+        padding: 11px;
+        width: 37%;
+        font-size: 0.8em;
+        align-items: center;
+    }
+
+    .btn-design-new svg {
+        height: 22px;
+    }
+
+    .content-text {
+        max-width: 85%;
+        zoom: 96%;
+    }
+
+    .content-text h3 {
+        font-size: 2.4em;
+    }
+
+    .history-box {
+        zoom: 88%;
+    }
+
+    #history-carousel {
+        bottom: -34%;
+        padding: 17px;
+        max-width: 100%;
+        right: -9%;
+    }
+
+    #history-carousel .owl-nav button.owl-next span,
+    #history-carousel .owl-nav button.owl-prev span {
+        font-size: 2em;
+    }
+
+    #history-carousel .owl-nav button.owl-next,
+    #history-carousel .owl-nav button.owl-prev {
+        width: 4em !important;
+        height: 4em !important;
+        margin-right: 10px;
+    }
+
+    .btn-design {
+        top: 84%;
+        left: 9%;
+        width: 53%;
+    }
+
+    .btn-design-new {
+        width: 48%;
+    }
+
+    #join-carousel .owl-dots {
+        width: 21%;
+        padding: 3px;
+        left: 39%;
+    }
+
+    .news-box {
+        max-width: 100%;
+    }
+
+    .ready h2 {
+        font-size: 1.4em;
+    }
+
+    .ready .btn-design-new {
+        width: 45%;
+    }
+
+    .social-icons {
+        justify-content: unset !important;
+    }
+
+    .offcanvas-body {
+        zoom: 82%;
+    }
+
+    /* about  */
+    .about-banner {
+        height: 21em;
+    }
+
+    .about-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .about-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .vision-section .card-custom p {
+        zoom: 86%;
+    }
+
+    .core-values .card-custom {
+        height: 18em;
+    }
+
+    .timeline-dot {
+        top: 0%;
+        left: 1.1%;
+    }
+
+    .timeline-image img {
+        max-width: 89%;
+    }
+
+    .custom-vew-state {
+        padding-left: 0 !important;
+        zoom: 72%;
+    }
+
+    .about-card-second {
+        height: 18em !important;
+    }
+
+    /* leadership  */
+    .leadership-banner {
+        height: 21em;
+    }
+
+    .leadership-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .leadership-banner-caption {
+        width: 90%;
+    }
+
+    .leadership-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .leader-section ul#pills-tab {
+        zoom: 106%;
+    }
+
+    .team-name {
+        padding: 1em;
+    }
+
+    .team-card {
+        height: unset;
+    }
+
+    .custom-view-small {
+        padding: 1em 0 !important;
+    }
+
+    .member-name {
+        font-size: 1.4em;
+    }
+
+    .project-section .btn-design {
+        left: unset;
+        position: unset;
+    }
+}
+
 /* port  */
 
-@media (min-width: 575px) and (max-width: 768px) {}
 
-@media (min-width: 570px) and (max-width: 575px) {
+/* 
+@media (min-width: 671px) and (max-width: 676px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 64px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 670px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 62px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 625px) and (max-width: 650px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 60px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 606px) and (max-width: 625px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 58px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 606px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 57px !important;
+        height: 67px !important;
+    }
+}
+
+@media (min-width: 575px) and (max-width: 590px) {
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 53px !important;
+        height: 67px !important;
+    }
+} */
+
+@media (min-width: 575px) and (max-width: 676px) {
+    .slider-nav {
+        display: none;
+    }
+
+    .slider-container {
+        height: 34em;
+    }
+
+    .top-banner {
+        height: 29em;
+    }
+
+    .custom-view {
+        min-height: 39em !important;
+    }
+
+    .power-img img {
+        margin-bottom: 1em;
+    }
+
+    .trusted-section {
+        position: relative;
+    }
+
+    .home-all-card {
+        height: 27em !important;
+    }
+
+    #new-carousel .swiper-button-prev,
+    #new-carousel .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 28%;
+        left: 37%;
+        height: 29px;
+    }
+
+    /* #history-carousel .swiper-button-prev,
+        #history-carousel .swiper-button-next {
+            width: 42px !important;
+            height: 48px !important;
+        } */
+
+    #history-carousel .swiper-button-prev {
+        left: 89.6% !important;
+    }
+
+    .divider {
+        height: 144px;
+        width: 2px;
+        margin-left: 20px;
+        rotate: 90deg;
+        position: absolute;
+        top: -6%;
+        right: 49%;
+    }
+
+    .slide {
+        background-position: left;
+        height: 87%;
+    }
+
+    .logo img {
+        max-width: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        margin-top: 0 !important;
+        padding: 15px 11px;
+        justify-content: space-between;
+    }
+
+    .section-text {
+        padding: 0 11px;
+    }
+
+    .card-image {
+        max-width: 34%;
+    }
+
+    .our-business .row {
+        --bs-gutter-y: unset;
+        --bs-gutter-x: unset;
+    }
+
+    header.shrink .nav {
+        margin-top: 0em !important;
+    }
+
+    header.shrink {
+        padding: 2.5em 0;
+    }
+
+    .slider-container {
+        height: 70vh;
+    }
+
+    .slide-content {
+        zoom: 77%;
+    }
+
+    .slide-title {
+        margin-bottom: 2rem;
+    }
+
+    .stats-container {
+        flex-wrap: unset;
+    }
+
+    .plr {
+        padding: 0.688em;
+    }
+
+    .footer-menu {
+        display: unset !important;
+    }
+
+    .footer-menu h5 {
+
+        margin-top: 2em;
+    }
+
+    .footer-menu.contact {
+        margin-top: 0em;
+        padding-left: unset;
+    }
+
+    .card-custom h3 {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .card-custom p {
+        padding: 0;
+        font-size: 0.8em;
+    }
+
+    .card-custom {
+        padding: 5px;
+        height: 90%;
+
+    }
+
+    .card-image {
+        max-width: 40%;
+        object-fit: cover;
+        max-height: 23%;
+        margin: 1em 0;
+    }
+
+    .group-icon {
+        text-align: end;
+    }
+
+    .group-icon img {
+        max-width: 70%;
+    }
+
+    .powering-progress .btn-design-new {
+        padding: 11px;
+        width: 37%;
+        font-size: 0.8em;
+        align-items: center;
+    }
+
+    .btn-design-new svg {
+        height: 22px;
+    }
+
+    .content-text {
+        max-width: 85%;
+        zoom: 96%;
+    }
+
+    .content-text h3 {
+        font-size: 2.1em;
+    }
+
+    .history-box {
+        zoom: 88%;
+    }
+
+    #history-carousel {
+        bottom: -37%;
+        padding: 17px;
+        max-width: 100%;
+        right: -9%;
+    }
+
+    #history-carousel .owl-nav button.owl-next span,
+    #history-carousel .owl-nav button.owl-prev span {
+        font-size: 2em;
+    }
+
+    #history-carousel .owl-nav button.owl-next,
+    #history-carousel .owl-nav button.owl-prev {
+        width: 4em !important;
+        height: 4em !important;
+        margin-right: 10px;
+    }
+
+    .btn-design {
+        top: 84%;
+        left: 9%;
+        width: 53%;
+    }
+
+    .btn-design-new {
+        width: 48%;
+    }
+
+    #join-carousel .owl-dots {
+        width: 21%;
+        padding: 3px;
+        left: 39%;
+    }
+
+    .news-box {
+        max-width: 100%;
+    }
+
+    .ready h2 {
+        font-size: 1.4em;
+    }
+
+    .ready .btn-design-new {
+        width: 45%;
+    }
+
+    .social-icons {
+        justify-content: unset !important;
+    }
+
+    .offcanvas-body {
+        zoom: 82%;
+    }
+
+    /* about  */
+    .about-banner {
+        height: 21em;
+    }
+
+    .about-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .about-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .vision-section .card-custom p {
+        zoom: 86%;
+    }
+
+    .core-values .card-custom {
+        height: 18em;
+    }
+
+    .timeline-dot {
+        top: 0%;
+        left: 1.5%;
+    }
+
+    .timeline-image img {
+        max-width: 89%;
+    }
+
+    .custom-vew-state {
+        padding-left: 0 !important;
+        zoom: 72%;
+    }
+
+    .about-card-second {
+        height: 18em !important;
+    }
+
+    /* leadership  */
+    .leadership-banner {
+        height: 21em;
+    }
+
+    .leadership-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .leadership-banner-caption {
+        width: 90%;
+    }
+
+    .leadership-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .leader-section ul#pills-tab {
+        zoom: 106%;
+    }
+
+    .team-name {
+        padding: 1em;
+    }
+
+    .team-card {
+        height: unset;
+    }
+
+    .custom-view-small {
+        padding: 1em 0 !important;
+    }
+
+    .member-name {
+        font-size: 1.4em;
+    }
+
+    .project-section .btn-design {
+        left: unset;
+        position: unset;
+    }
+}
+
+/* @media (min-width: 570px) and (max-width: 575px) {
 
     #history-carousel .swiper-button-prev,
     #history-carousel .swiper-button-next {
@@ -1014,12 +1812,20 @@
         width: 44px !important;
         height: 67px !important;
     }
-}
+} */
 
 
 @media (min-width: 480px) and (max-width: 574px) {
+    .slider-container {
+        height: 34em;
+    }
+
     .top-banner {
         height: 29em;
+    }
+
+    .custom-view {
+        min-height: 39em !important;
     }
 
     .power-img img {
@@ -1246,9 +2052,88 @@
         zoom: 82%;
     }
 
-    /* .submenu-off {
-            width: 68% !important;
-        } */
+    /* about  */
+    .about-banner {
+        height: 21em;
+    }
+
+    .about-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .about-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .vision-section .card-custom p {
+        zoom: 86%;
+    }
+
+    .core-values .card-custom {
+        height: 18em;
+    }
+
+    .timeline-dot {
+        top: 0%;
+        left: 2%;
+    }
+
+    .timeline-image img {
+        max-width: 89%;
+    }
+
+    .custom-vew-state {
+        padding-left: 0 !important;
+        zoom: 72%;
+    }
+
+    .about-card-second {
+        height: 18em !important;
+    }
+
+    /* leadership  */
+    .leadership-banner {
+        height: 21em;
+    }
+
+    .leadership-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .leadership-banner-caption {
+        width: 90%;
+    }
+
+    .leadership-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .leader-section ul#pills-tab {
+        zoom: 89%;
+    }
+
+    .team-name {
+        padding: 1em;
+    }
+
+    .team-card {
+        height: unset;
+    }
+
+    .custom-view-small {
+        padding: 1em 0 !important;
+    }
+
+    .member-name {
+        font-size: 1.4em;
+    }
+
+    .project-section .btn-design {
+        left: unset;
+        position: unset;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1337,11 +2222,15 @@
     }
 
     .slider-container {
-        height: 70vh;
+        height: 34em;
     }
 
     .slide-content {
         zoom: 77%;
+    }
+
+    .custom-view {
+        min-height: 39em !important;
     }
 
     .slide-title {
@@ -1479,16 +2368,93 @@
         zoom: 82%;
     }
 
-    /* .submenu-off {
-        width: 68% !important;
-    } */
+    /* about  */
+    .about-banner {
+        height: 21em;
+    }
 
+    .about-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
 
+    .about-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .vision-section .card-custom p {
+        zoom: 86%;
+    }
+
+    .core-values .card-custom {
+        height: 18em;
+    }
+
+    .timeline-dot {
+        top: 0%;
+        left: 2%;
+    }
+
+    .timeline-image img {
+        max-width: 89%;
+    }
+
+    .custom-vew-state {
+        padding-left: 0 !important;
+        zoom: 72%;
+    }
+
+    .about-card-second {
+        height: 18em !important;
+    }
+
+    /* leadership  */
+    .leadership-banner {
+        height: 21em;
+    }
+
+    .leadership-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .leadership-banner-caption {
+        width: 90%;
+    }
+
+    .leadership-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .leader-section ul#pills-tab {
+        zoom: 81%;
+    }
+
+    .team-name {
+        padding: 1em;
+    }
+
+    .team-card {
+        height: unset;
+    }
+
+    .custom-view-small {
+        padding: 1em 0 !important;
+    }
+
+    .member-name {
+        font-size: 1.4em;
+    }
+
+    .project-section .btn-design {
+        left: unset;
+        position: unset;
+    }
 }
 
 
 
-@media (min-width: 423px) and (max-width: 440px) {
+/* @media (min-width: 423px) and (max-width: 440px) {
 
     #history-carousel .swiper-button-prev,
     #history-carousel .swiper-button-next {
@@ -1533,7 +2499,7 @@
     #history-carousel .swiper-button-next {
         width: 44px !important;
     }
-}
+} */
 
 
 @media (min-width: 365px) and (max-width: 439px) {
@@ -1631,11 +2597,76 @@
     .about-banner-caption h2 {
         zoom: 42%;
     }
+
+    .vision-section .card-custom p {
+        zoom: 86%;
+    }
+
+    .core-values .card-custom {
+        height: 22em;
+    }
+
+    .timeline-dot {
+        top: 0%;
+        left: 2%;
+    }
+
+    .timeline-image img {
+        max-width: 89%;
+    }
+
+    .custom-vew-state {
+        padding-left: 0 !important;
+        zoom: 72%;
+    }
+
+    /* leadership  */
+    .leadership-banner {
+        height: 21em;
+    }
+
+    .leadership-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .leadership-banner-caption {
+        width: 90%;
+    }
+
+    .leadership-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .leader-section ul#pills-tab {
+        zoom: 76%;
+    }
+
+    .team-name {
+        padding: 1em;
+    }
+
+    .team-card {
+        height: unset;
+    }
+
+    .custom-view-small {
+        padding: 1em 0 !important;
+    }
+
+    .member-name {
+        font-size: 1.4em;
+    }
+
+    .project-section .btn-design {
+        left: unset;
+        position: unset;
+    }
 }
 
 /* 321 to 365  */
 
-@media (min-width: 352px) and (max-width: 365px) {
+/* @media (min-width: 352px) and (max-width: 365px) {
     #history-carousel .swiper-button-next {
         width: 43px !important;
     }
@@ -1653,11 +2684,11 @@
     }
 }
 
-@media (min-width: 321px) and (max-width: 323px) {
+@media (min-width: 320px) and (max-width: 323px) {
     #history-carousel .swiper-button-next {
         width: 37px !important;
     }
-}
+} */
 
 @media (min-width: 320px) and (max-width: 365px) {
     .news-content .btn-design-new {
@@ -1749,5 +2780,70 @@
 
     .about-banner-caption h2 {
         zoom: 42%;
+    }
+
+    .vision-section .card-custom p {
+        zoom: 86%;
+    }
+
+    .core-values .card-custom {
+        height: 25em;
+    }
+
+    .timeline-dot {
+        top: 0%;
+        left: 2.6%;
+    }
+
+    .timeline-image img {
+        max-width: 89%;
+    }
+
+    .custom-vew-state {
+        padding-left: 0 !important;
+        zoom: 63%;
+    }
+
+    /* leadership  */
+    .leadership-banner {
+        height: 21em;
+    }
+
+    .leadership-banner img {
+        height: 21em;
+        object-fit: cover;
+    }
+
+    .leadership-banner-caption {
+        width: 90%;
+    }
+
+    .leadership-banner-caption h2 {
+        zoom: 42%;
+    }
+
+    .leader-section ul#pills-tab {
+        zoom: 57%;
+    }
+
+    .team-name {
+        padding: 1em;
+    }
+
+    .team-card {
+        height: unset;
+    }
+
+    .custom-view-small {
+        padding: 1em 0 !important;
+    }
+
+    .member-name {
+        font-size: 1.4em;
+    }
+
+    .project-section .btn-design {
+        left: unset;
+        position: unset;
     }
 }

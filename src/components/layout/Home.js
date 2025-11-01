@@ -476,10 +476,10 @@ export default function Home() {
                                             spaceBetween={30}
                                             slidesPerView={3}
                                             loop={true}
-                                            autoplay={{
-                                                delay: 2000,
-                                                disableOnInteraction: false,
-                                            }}
+                                            // autoplay={{
+                                            //     delay: 2000,
+                                            //     disableOnInteraction: false,
+                                            // }}
                                             breakpoints={{
                                                 320: { slidesPerView: 2 },
                                                 576: { slidesPerView: 3 },

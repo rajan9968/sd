@@ -285,18 +285,18 @@ export default function About() {
                                 modules={[Navigation, Autoplay]}
                                 spaceBetween={20}
                                 slidesPerView={4}
-                                autoplay={{
-                                    delay: 3000,
-                                    disableOnInteraction: false,
-                                    pauseOnMouseEnter: true
-                                }}
+                                // autoplay={{
+                                //     delay: 3000,
+                                //     disableOnInteraction: false,
+                                //     pauseOnMouseEnter: true
+                                // }}
                                 navigation={{
                                     prevEl: '.swiper-button-prev',
                                     nextEl: '.swiper-button-next',
                                 }}
                                 loop={true}
                                 breakpoints={{
-                                    0: { slidesPerView: 1 },
+                                    0: { slidesPerView: 2 },
                                     576: { slidesPerView: 2 },
                                     992: { slidesPerView: 4 },
                                 }}
@@ -310,7 +310,7 @@ export default function About() {
                                     return (
                                         <SwiperSlide key={item.id}>
                                             <div
-                                                className="col-md-6 col-lg-12 col-6"
+                                                className="col-md-6 col-lg-12 col-12"
                                                 onMouseEnter={() => setHoveredId(item.id)}
                                                 onMouseLeave={() => setHoveredId(null)}
                                             >
@@ -406,7 +406,7 @@ export default function About() {
 
                             {/* 📍 Right Column - States & Locations */}
                             <div className="col-lg-6">
-                                <div className="text-start pl-4">
+                                <div className="text-start custom-vew-state pl-4">
                                     <ul className="list-unstyled m-0">
                                         {mapData?.state_location?.length > 0 ? (
                                             mapData.state_location.map((loc, index) => (
