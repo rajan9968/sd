@@ -958,13 +958,52 @@
     .contact-submit-btn {
         position: unset;
     }
-        .contect-form {
-            padding: 0 0em;
-        }
+
+    .contect-form {
+        padding: 0 0em;
+    }
+
+    .cul-sec {
+        height: 22em;
+        padding: 0px;
+        margin-bottom: 0em;
+        zoom: 79% !important;
+
+    }
+
+    .cul-pot {
+        min-height: 38em !important;
+    }
+
+    .cul-pot #history-carousel {
+        bottom: -60%;
+        right: -13%;
+    }
+
+    .custom-ali {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        align-items: end;
+        top: 24px;
+        gap: 12px;
+        margin-left: -13px;
+    }
+
+    .custom-ali .swiper-button-prev,
+    .custom-ali .swiper-button-next {
+        position: unset !important;
+        width: 63px !important;
+        height: 96px !important;
+    }
 }
 
 
-/* @media (min-width: 761px) and (max-width: 768px) {
+@media (min-width: 761px) and (max-width: 768px) {
 
     #history-carousel .swiper-button-prev,
     #history-carousel .swiper-button-next {
@@ -1055,7 +1094,7 @@
         width: 64px !important;
         height: 67px !important;
     }
-} */
+}
 
 @media (min-width: 677px) and (max-width: 768px) {
     .slider-nav {
@@ -1395,7 +1434,7 @@
 /* port  */
 
 
-/* 
+
 @media (min-width: 671px) and (max-width: 676px) {
 
     #history-carousel .swiper-button-prev,
@@ -1448,7 +1487,7 @@
         width: 53px !important;
         height: 67px !important;
     }
-} */
+}
 
 @media (min-width: 575px) and (max-width: 676px) {
     .slider-nav {
@@ -1785,7 +1824,7 @@
     }
 }
 
-/* @media (min-width: 570px) and (max-width: 575px) {
+@media (min-width: 570px) and (max-width: 575px) {
 
     #history-carousel .swiper-button-prev,
     #history-carousel .swiper-button-next {
@@ -1855,12 +1894,23 @@
         width: 44px !important;
         height: 67px !important;
     }
-} */
+}
 
+@media (min-width: 515px) and (max-width: 574px) {
+    .custom-ali {
+        top: 32px !important;
+        gap: 0px;
+    }
+}
 
 @media (min-width: 480px) and (max-width: 574px) {
     .slider-container {
         height: 34em;
+    }
+
+    .custom-ali {
+        margin-left: -24px;
+        top: 30px;
     }
 
     .work-with-us-card {
@@ -2189,9 +2239,17 @@
     }
 }
 
+
+
+
 @media only screen and (max-width: 480px) {
     .top-banner {
         height: 29em;
+    }
+
+    .custom-ali {
+        top: 23px;
+        gap: 17px;
     }
 
     .work-with-us-card {
@@ -2516,8 +2574,8 @@
 }
 
 
-
-/* @media (min-width: 423px) and (max-width: 440px) {
+/* 
+@media (min-width: 423px) and (max-width: 440px) {
 
     #history-carousel .swiper-button-prev,
     #history-carousel .swiper-button-next {
