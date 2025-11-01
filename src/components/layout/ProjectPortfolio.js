@@ -111,7 +111,7 @@ export default function ProjectPortfolio() {
                         <div className="row">
                             {projects.length > 0 ? (
                                 projects.map((project) => (
-                                    <div className="col-lg-4 mb-4" key={project.id}>
+                                    <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4" key={project.id}>
                                         <div className="news-box rounded">
                                             <div className="new-image">
                                                 <img

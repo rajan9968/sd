@@ -2243,3 +2243,8 @@ h2.accordion-header {
 .custom-css-in-blog {
   height: 73% !important;
 }
+
+.trusted-logos .swiper-slide {
+
+  text-align: center;
+}

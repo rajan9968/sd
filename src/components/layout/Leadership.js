@@ -122,7 +122,7 @@ export default function Leadership() {
                             <div className="row">
                                 {filteredMembers.map((member) => (
                                     <div
-                                        className="col-lg-4 mb-4"
+                                        className="col-lg-4 col-12 mb-4"
                                         key={member.id}
                                         onClick={() => handleShow(member)}
                                         style={{ cursor: "pointer" }}
@@ -156,7 +156,7 @@ export default function Leadership() {
                                                         className="img-fluid h-100 object-fit-cover"
                                                     />
                                                 </div>
-                                                <div className="col-md-7 p-4">
+                                                <div className="col-md-7 custom-view-small p-4">
                                                     <h3 className="member-name">{selectedMember.name}</h3>
                                                     <h6 className="member-position mb-3">{selectedMember.designation}</h6>
 
