@@ -593,7 +593,7 @@ export default function Home() {
                     </div>
                 </section>
                 <section
-                    className="our-portfolio mb-4 bg-white"
+                    className="our-portfolio custom-view mb-4 bg-white"
                     style={{
                         background: `url(${slides[activeIndex].bgImage}) no-repeat center center/cover`,
                         minHeight: "80vh",

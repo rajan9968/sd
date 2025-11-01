@@ -45,14 +45,14 @@ export default function Header() {
                 <div className="row">
                     <div className="nav mt-4">
                         {/* Logo */}
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-6">
                             <Link to="/" className="logo">
                                 <img src="/assets/images/datta-infra-logo.png" alt="logo" />
                             </Link>
                         </div>
 
                         {/* Navigation */}
-                        <div className="col-lg-8 d-flex justify-content-end">
+                        <div className="col-lg-8 col-6 d-flex justify-content-end">
                             <button
                                 type="button"
                                 onClick={handleMainOffcanvasShow}
