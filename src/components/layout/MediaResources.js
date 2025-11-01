@@ -174,7 +174,7 @@ export default function MediaResources() {
                                                         />
                                                     </a>
                                                     <div className="team-name px-3 pb-3">
-                                                        <p className="text-muted blog-title">
+                                                        <p className="blog-title">
                                                             {item.sub_heading}
                                                         </p>
                                                     </div>
@@ -212,7 +212,7 @@ export default function MediaResources() {
                                                         />
                                                     </a>
                                                     <div className="team-name px-3 pb-3">
-                                                        <p className="text-muted blog-title">{item.sub_heading}</p>
+                                                        <p className="blog-title">{item.sub_heading}</p>
                                                     </div>
                                                 </div>
                                             </div>

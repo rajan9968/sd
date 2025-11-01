@@ -52,8 +52,10 @@ export default function Awards() {
                     />
                     <div className="container-fluid plr">
                         <div className="leadership-banner-caption">
-                            <h2 className="mb-0">Our Awards</h2>
-                            <p className="text-white mb-5">{awardsData[0]?.sub_heading}</p>
+                            <h2 className="mb-0">Our Awards
+                                <br></br>
+                                <span> {awardsData[0]?.sub_heading}</span>
+                            </h2>
                             <ul className="path-women-empow">
                                 <li>
                                     <a href="/">Home</a>
@@ -104,15 +106,15 @@ export default function Awards() {
                                                     alt={item.award_name}
                                                 />
                                             </div>
-                                            <div className="news-content rounded-bottom">
-                                                <p className="award-title">
-                                                    <strong>Award:</strong> {item.award_name}
+                                            <div className="news-content rounded-bottom costom-community">
+                                                <p className="award-title blog-date text-white">
+                                                    Award: {item.award_name}
                                                 </p>
-                                                <p className="award-title">
-                                                    <strong>Category:</strong> {item.category}
+                                                <p className="content-news-para blog-date text-white">
+                                                    Category: {item.category}
                                                 </p>
-                                                <p className="award-title">
-                                                    <strong>Date:</strong>{" "}
+                                                <p className="content-news-para blog-date text-white">
+                                                    Date:{" "}
                                                     {new Date(item.date).toLocaleDateString("en-GB")}
                                                 </p>
                                             </div>
@@ -134,17 +136,26 @@ export default function Awards() {
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 d-flex gap-1">
-                                <div className="search-bar">
-                                    <i className="fa fa-search"></i>
-                                    <input type="text" placeholder="Search..." />
+                            <div className="col-lg-3">
+                                <div className="d-flex gap-1">
+                                    <div className="search-bar">
+                                        <i className="fa fa-search"></i>
+                                        <input
+                                            type="text"
+                                            placeholder="Search..."
+                                        />
+                                    </div>
+                                    <Form.Select aria-label="Default select example" style={{ width: "40%" }}>
+                                        <option>Year</option>
+                                        <option value="1">2025</option>
+                                        <option value="2">2024</option>
+                                        <option value="3">2023</option>
+                                        <option value="3">2022</option>
+                                        <option value="3">2021</option>
+                                        <option value="3">2020</option>
+                                        <option value="3">2019</option>
+                                    </Form.Select>
                                 </div>
-                                <Form.Select style={{ width: "40%" }}>
-                                    <option>Year</option>
-                                    <option>2025</option>
-                                    <option>2024</option>
-                                    <option>2023</option>
-                                </Form.Select>
                             </div>
                         </div>
 
@@ -152,20 +163,20 @@ export default function Awards() {
                             {allAwards.map((item, index) => (
                                 <div className="col-lg-4 mb-4" key={index}>
                                     <Link to="#" className="text-black text-decoration-none">
-                                        <div className="team-car shadow rounded bg-light h-100 cursor-pointer bg-color">
+                                        <div className="news-box rounded">
                                             <img
                                                 src={`${API_PATH}/uploads/awards/${item.image}`}
                                                 alt={item.award_name}
-                                                className="img-fluid rounded-top mb-2"
+                                                className="img-fluid rounded-top mb-2 w-100"
                                             />
-                                            <div className="team-name">
-                                                <h5 className="mb-2 blog-date text-white">
+                                            <div className="news-content rounded-bottom costom-community">
+                                                <p className="award-title blog-date text-white">
                                                     Award: {item.award_name}
-                                                </h5>
-                                                <p className="award-title text-white">
+                                                </p>
+                                                <p className="content-news-para blog-date text-white">
                                                     Category: {item.category}
                                                 </p>
-                                                <p className="award-title text-white">
+                                                <p className="content-news-para blog-date text-white">
                                                     Date: {new Date(item.date).toLocaleDateString("en-GB")}
                                                 </p>
                                             </div>

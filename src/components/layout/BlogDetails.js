@@ -112,7 +112,7 @@ export default function BlogDetails() {
                                                 href={readMoreLink}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-primary fw-semibold"
+                                                className="btn read-more-custom"
                                             >
                                                 Click Here
                                             </a>

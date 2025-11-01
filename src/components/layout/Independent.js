@@ -208,7 +208,7 @@ export default function Independent() {
                             <h2 className="section-title">Key Projects</h2>
                         </div>
 
-                        <div id="join-carousel-w" className="join-carousel-wrapper">
+                        <div id="join-carousel-w" className="join-carousel-wrapper custom-ind-dosts">
                             <Swiper
                                 modules={[Autoplay, Pagination]}
                                 spaceBetween={20}

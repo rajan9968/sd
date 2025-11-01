@@ -70,8 +70,10 @@ export default function Contact() {
                     />
                     <div className="container-fluid plr">
                         <div className="leadership-banner-caption">
-                            <h2>Contact Us</h2>
-                            <p className="text-white mb-4">{contactData?.contact_sub_heading}</p>
+                            <h2>Contact Us
+                                <br></br>
+                                <span> {contactData?.contact_sub_heading}</span>
+                            </h2>
                             <ul className="path-women-empow">
                                 <li>
                                     <a href="/">Home</a>
@@ -92,7 +94,9 @@ export default function Contact() {
                             <h2 className="section-title">Query Form</h2>
                         </div>
 
-                        <form className="contect-form" onSubmit={handleSubmit}> <div className="row mb-3"> <div className="col-md-6"> <label className="form-label">Full Name</label> <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="form-control" placeholder="Enter your Full name" required /> </div> <div className="col-md-6"> <label className="form-label">Email Address</label> <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" placeholder="Enter your email" required /> </div> </div> <div className="row mb-3"> <div className="col-md-6"> <label className="form-label">Contact No</label> <input type="text" name="contactNo" value={formData.contactNo} onChange={handleChange} className="form-control" placeholder="Enter contact number" /> </div> <div className="col-md-6"> <label className="form-label">Type of Query</label> <select className="form-control"> <option>Select</option> <option value="1">General </option> <option value="2">Business Related</option> <option value="3">Career Related</option> <option value="3">Investor Related</option> <option value="3">Others</option> </select> </div> </div> <div className="row mb-3"> <div className="col-md-8"> <label className="form-label">Remark / Message*</label> <textarea name="message" value={formData.message} onChange={handleChange} className="form-control" placeholder="Enter your message" rows="4" required ></textarea> </div> <div className="col-md-4 d-flex align-items-center"> <ReCAPTCHA sitekey="YOUR_RECAPTCHA_SITE_KEY" onChange={handleCaptcha} /> </div> </div> <div className="d-flex justify-content-center contact-btn pb-5 my-5"> <div className="btn-design mb-5"> <Link to="#" className="custom-btn"> Submit </Link> </div> </div> </form>
+                        <form className="contect-form" onSubmit={handleSubmit}> <div className="row mb-3"> <div className="col-md-6"> <label className="form-label">Full Name</label> <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="form-control" placeholder="Enter your Full name" required /> </div> <div className="col-md-6"> <label className="form-label">Email Address</label> <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" placeholder="Enter your email" required /> </div> </div> <div className="row mb-3"> <div className="col-md-6"> <label className="form-label">Contact No</label> <input type="text" name="contactNo" value={formData.contactNo} onChange={handleChange} className="form-control" placeholder="Enter contact number" /> </div> <div className="col-md-6"> <label className="form-label">Type of Query</label> <select className="form-control"> <option>Select</option> <option value="1">General </option> <option value="2">Business Related</option> <option value="3">Career Related</option> <option value="3">Investor Related</option> <option value="3">Others</option> </select> </div> </div> <div className="row mb-3"> <div className="col-md-8"> <label className="form-label">Remark / Message*</label> <textarea name="message" value={formData.message} onChange={handleChange} className="form-control" placeholder="Enter your message" rows="4" required ></textarea> </div> <div className="col-md-4 d-flex align-items-center">
+                            <ReCAPTCHA sitekey="YOUR_RECAPTCHA_SITE_KEY" onChange={handleCaptcha} /> </div> </div> <div className="d-flex justify-content-center contact-btn pb-5 my-5">
+                                <div className="btn-design contact-submit-btn mb-5"> <Link to="#" className="custom-btn"> Submit </Link> </div> </div> </form>
                     </div>
                 </section>
 

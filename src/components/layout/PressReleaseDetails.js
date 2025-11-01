@@ -108,14 +108,14 @@ export default function PressReleaseDetails() {
 
                                 {/* Show "Read More" link only if exists */}
                                 {readMoreLink && (
-                                    <p className="mt-3">
+                                    <p className=" mt-3">
                                         <a
                                             href={readMoreLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="btn btn-outline-primary btn-sm rounded-pill"
+                                            className="btn read-more-custom"
                                         >
-                                            Read More →
+                                            Read More
                                         </a>
                                     </p>
                                 )}

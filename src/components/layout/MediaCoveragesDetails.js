@@ -113,9 +113,9 @@ export default function MediaCoveragesDetails() {
                                             href={readMoreLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="btn btn-outline-primary btn-sm rounded-pill"
+                                            className="btn read-more-custom"
                                         >
-                                            Read More →
+                                            Read More
                                         </a>
                                     </p>
                                 )}

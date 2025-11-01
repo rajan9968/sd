@@ -140,7 +140,7 @@ export default function PressRelease() {
                                             className="d-flex text-black w-100 align-items-center tag-link"
                                             style={{ textDecoration: "none" }}
                                         >
-                                            <div className="col-lg-4 mb-4">
+                                            <div className="col-lg-4">
                                                 <div className="card-cbb overflow-hidden">
                                                     <img
                                                         src={`${API_PATH}/uploads/press-releases/${item.press_release_picture}`}
@@ -152,17 +152,17 @@ export default function PressRelease() {
 
                                             <div className="col-lg-8 newsroom">
                                                 <div className="px-4">
-                                                    <h5 className="fw-bold">{item.press_release_heading}</h5>
+                                                    <h5 className="press-tile-custom">{item.press_release_heading}</h5>
                                                     <p className="mb-2">
                                                         {item.press_release_content
                                                             .replace(/Read more at:.*/i, "")
                                                             .slice(0, 180)}...
                                                     </p>
                                                     <p className="mb-1">
-                                                        <strong>Date:</strong> {date}
+                                                        Date: {date}
                                                     </p>
                                                     <p className="mb-0">
-                                                        <strong>Publication:</strong> {item.press_release_publication}
+                                                        Publication: {item.press_release_publication}
                                                     </p>
                                                 </div>
                                             </div>
@@ -172,7 +172,7 @@ export default function PressRelease() {
                             })
                         )}
                         <div className="my-3 text-center d-flex justify-content-center">
-                            <div className="btn-design">
+                            <div className="btn-design contact-submit-btn">
                                 <Link to="/press-release-details" className="custom-btn">
                                     Load More
                                     <svg

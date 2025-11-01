@@ -206,7 +206,7 @@ export default function Culture() {
                                             <div className="new-image">
                                                 <img src={BASE_URL + item.image} className="img-fluid rounded" alt="Community" />
                                             </div>
-                                            <div className="news-content rounded-bottom">
+                                            <div className="news-content rounded-bottom costom-community">
                                                 <p className="award-title">{item.heading}</p>
                                                 <p className="content-news-para">{item.description}</p>
                                             </div>

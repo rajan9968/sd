@@ -325,7 +325,7 @@ export default function About() {
                                                         backgroundPosition: "center",
                                                         transition: "all 0.3s ease",
                                                         transform:
-                                                            hoveredId === item.id ? "scale(1.03)" : "scale(1)",
+                                                            hoveredId === item.id ? "scale(1)" : "scale(1)",
                                                         filter:
                                                             hoveredId === item.id ? "brightness(1.1)" : "brightness(1)",
                                                     }}

@@ -137,7 +137,7 @@ export default function Investors() {
                                     nextEl: ".new-next",
                                 }}
                                 loop={true}
-                                autoplay={{ delay: 3000 }}
+                                // autoplay={{ delay: 3000 }}
                                 breakpoints={{
                                     0: { slidesPerView: 1 },
                                     576: { slidesPerView: 2 },
@@ -147,7 +147,7 @@ export default function Investors() {
                                 {newsData.map((item, index) => (
                                     <SwiperSlide key={index}>
                                         <div>
-                                            <p>{item.text}</p>
+                                            <p className="cat-name">{item.text}</p>
                                         </div>
                                     </SwiperSlide>
                                 ))}
@@ -179,7 +179,7 @@ export default function Investors() {
                                 {newsData2.map((item, index) => (
                                     <SwiperSlide key={index}>
                                         <Link>
-                                            <div className="filterLink">
+                                            <div className="filterLink cat-name">
                                                 {item.text}
                                             </div>
                                         </Link>

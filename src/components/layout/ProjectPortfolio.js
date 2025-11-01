@@ -120,11 +120,11 @@ export default function ProjectPortfolio() {
                                                     className="img-fluid rounded"
                                                 />
                                             </div>
-                                            <div className="news-content rounded-bottom">
+                                            <div className="news-content rounded-bottom custom-project-h">
                                                 <p className="award-title mb-0">
                                                     {project.project_name}
                                                 </p>
-                                                <p className="text-mute mb-0">{project.location}</p>
+                                                <p className="pro-ti mb-0">{project.location}</p>
                                                 <p className="content-news-para">{project.sub_heading}</p>
                                             </div>
                                         </div>

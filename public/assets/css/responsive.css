@@ -4,6 +4,10 @@
         height: 26em !important;
     }
 
+    .custom-css-in-blog {
+        height: 70% !important;
+    }
+
     .about-core-icon {
         max-width: 33%;
     }
@@ -67,8 +71,47 @@
         padding: 0;
     }
 
+    .custom-css-in-blog {
+        height: 65% !important;
+    }
+
+    .contact-submit-btn {
+        position: unset;
+    }
+
+    .key-highlights .display-4 {
+        font-size: 3rem;
+    }
+
+    .cistom-gridifnra .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 13%;
+    }
+
+    .custom-epc-dosts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 9%;
+        left: 46%;
+    }
+
+    .custom-ind-dosts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 21%;
+        padding: 8px;
+        left: 41%;
+    }
+
+    .custom-ind-dosts .swiper-pagination-bullet {
+        height: 7px;
+    }
+
     .about-banner-caption h2 {
         font-size: 3em;
+    }
+
+    .leadership-banner-caption h2 {
+        font-size: 3em;
+    }
+
+    .team-card {
+        height: 34em;
     }
 
     .about-card-second {
@@ -233,6 +276,93 @@
         margin-bottom: 2em;
     }
 
+    .investors-section .swiper-button-prev,
+    .investors-section .swiper-button-next {
+        top: 100% !important;
+    }
+
+    .cat-name {
+        zoom: 82%;
+    }
+
+    .logo img {
+        max-width: 70%;
+    }
+
+    .custom-css-in-blog {
+        height: 65% !important;
+    }
+
+    .contact-submit-btn {
+        position: unset;
+    }
+
+    .press-tile-custom {
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+
+    .newsroom p {
+        font-size: 0.8em;
+    }
+
+    .costom-community {
+        max-height: 6em;
+    }
+
+    .cistom-gridifnra .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 16%;
+    }
+
+    .custom-epc-dosts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 10%;
+        left: 46%;
+    }
+
+    .custom-ind-dosts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 21%;
+        padding: 8px;
+        left: 41%;
+    }
+
+    .custom-ind-dosts .swiper-pagination-bullet {
+        height: 7px;
+    }
+
+    .key-highlights .display-4 {
+        font-size: 2em;
+    }
+
+    .award-title {
+        font-size: 1em;
+    }
+
+    .pro-ti {
+        font-size: 0.8em;
+    }
+
+    .custom-donts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 22%;
+        left: 39%;
+    }
+
+    .content-news-para {
+        font-size: 0.8em;
+    }
+
+    .about-card-second {
+        height: 21em !important;
+    }
+
+    .about-core-card-h {
+        height: 21em !important;
+    }
+
+    .about-state,
+    .about-location {
+        font-size: 1em;
+    }
+
     .trusted-section .swiper-wrapper {
         align-items: center;
     }
@@ -276,7 +406,8 @@
 
     .section-text,
     .sus-para,
-    .content-text p {
+    .content-text p,
+    .power-content p {
         font-size: 0.8em;
     }
 
@@ -485,11 +616,20 @@
 
     .team-name {
         padding: 1em;
+        padding-top: 0.5em;
+    }
+
+    .team-name h5 {
+        font-size: 1em;
+    }
+
+    .team-name p {
+        font-size: 0.8em;
     }
 
     .team-card {
 
-        height: 28em;
+        height: 26em;
     }
 
     .leader-section .nav-pills .nav-link.active,

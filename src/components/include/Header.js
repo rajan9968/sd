@@ -52,7 +52,7 @@ export default function Header() {
                         </div>
 
                         {/* Navigation */}
-                        <div className="col-lg-8">
+                        <div className="col-lg-8 d-flex justify-content-end">
                             <button
                                 type="button"
                                 onClick={handleMainOffcanvasShow}

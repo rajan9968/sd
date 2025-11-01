@@ -1386,6 +1386,11 @@ header.shrink {
   font-weight: 700;
   color: #FFFFFF;
   margin-bottom: 1.5em;
+  line-height: 0.9;
+}
+
+.leadership-banner-caption span {
+  font-size: 0.5em;
 }
 
 .leadership-banner-caption ul {
@@ -2178,4 +2183,63 @@ h2.accordion-header {
 
 .contect-form {
   padding: 0 5em;
+}
+
+.custom-project-h {
+  max-height: 8em;
+}
+
+.custom-donts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  margin-top: 2%;
+  width: 18%;
+  border-radius: 27px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 41%;
+  cursor: pointer;
+}
+
+.cistom-gridifnra .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  margin-top: 2%;
+  width: 11%;
+  border-radius: 27px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 44%;
+  cursor: pointer;
+}
+
+.costom-community {
+  max-height: 7em;
+}
+
+.custom-carerr-icon {
+  max-width: 40%;
+}
+
+.press-tile-custom {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.read-more-custom {
+  background: #fff;
+  color: #cda837;
+  font-size: 1em;
+  padding: 8px 23px;
+}
+
+.read-more-custom:hover {
+  background: #cda837;
+  color: #fff;
+}
+
+.custom-css-in-blog {
+  height: 73% !important;
 }

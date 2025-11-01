@@ -124,7 +124,7 @@ const Careers = () => {
                                             {item.icon && (
                                                 <img
                                                     src={`${API_PATH}/uploads/careers/${item.icon}`}
-                                                    className="card-image"
+                                                    className="card-image custom-carerr-icon"
                                                     alt={item.heading}
                                                 />
                                             )}
@@ -182,7 +182,7 @@ const Careers = () => {
                                     autoplay={{ delay: 4000, disableOnInteraction: false }}
                                     breakpoints={{
                                         0: { slidesPerView: 1 },
-                                        768: { slidesPerView: 2 },
+                                        768: { slidesPerView: 1 },
                                     }}
                                     className="employee-testimonial-swiper"
                                 >

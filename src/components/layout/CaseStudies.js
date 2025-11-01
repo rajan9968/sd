@@ -150,7 +150,7 @@ export default function CaseStudies() {
                                                 <img
                                                     src={`${API_PATH}/uploads/blogs/${blog.blog_inner_image}`}
                                                     alt={blog.sub_heading}
-                                                    className="img-fluid rounded-top mb-3"
+                                                    className="img-fluid custom-css-in-blog rounded-top mb-3"
                                                 />
                                                 <div className="team-name p-3">
                                                     <h5 className="mb-1 blog-date">
@@ -168,7 +168,7 @@ export default function CaseStudies() {
                                 );
                             })}
                             <div className="col-lg-12 my-5 text-center d-flex justify-content-center">
-                                <div className="btn-design">
+                                <div className="btn-design contact-submit-btn">
                                     <a href="" className="custom-btn">
                                         Load More
                                     </a>
