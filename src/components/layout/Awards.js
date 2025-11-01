@@ -129,7 +129,7 @@ export default function Awards() {
                 {/* --- All Awards Section --- */}
                 <section className="project-section py-5">
                     <div className="container-fluid plr">
-                        <div className="row">
+                        <div className="row mb-3">
                             <div className="col-lg-6 offset-lg-3">
                                 <div className="text-center mb-5">
                                     <h2 className="section-title">All Awards</h2>

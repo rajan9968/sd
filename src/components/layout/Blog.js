@@ -104,7 +104,7 @@ export default function Blog() {
                 </section>
                 <section className='project-section py-5'>
                     <div className="container-fluid plr">
-                        <div className="row">
+                        <div className="row mb-3">
                             <div className="col-lg-3"></div>
                             <div className="col-lg-6">
                                 <div className="text-center mb-5">

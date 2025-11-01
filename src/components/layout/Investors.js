@@ -139,7 +139,10 @@ export default function Investors() {
                                 loop={true}
                                 // autoplay={{ delay: 3000 }}
                                 breakpoints={{
-                                    0: { slidesPerView: 1 },
+                                    0: {
+                                        slidesPerView: 1
+
+                                    },
                                     576: { slidesPerView: 2 },
                                     992: { slidesPerView: 5 },
                                 }}

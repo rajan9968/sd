@@ -941,6 +941,22 @@
 }
 
 /* 676 7686  */
+@media (max-width: 768px) {
+    .tag-link {
+        display: unset !important;
+    }
+
+    .news-con-view {
+        padding: 0 !important;
+        margin-top: 1em;
+    }
+
+    .custom-css-in-blog {
+        height: unset !important;
+    }
+}
+
+
 /* @media (min-width: 761px) and (max-width: 768px) {
 
     #history-carousel .swiper-button-prev,

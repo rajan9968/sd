@@ -87,7 +87,7 @@ export default function MediaCoverages() {
                 </section>
                 <section className='project-section py-5'>
                     <div className="container-fluid plr">
-                        <div className="row">
+                        <div className="row mb-3">
                             <div className="col-lg-3"></div>
                             <div className="col-lg-6">
                                 <div className="text-center mb-5">
@@ -152,7 +152,7 @@ export default function MediaCoverages() {
                                             </div>
 
                                             <div className="col-lg-8 newsroom">
-                                                <div className="px-4">
+                                                <div className="news-con-view px-4">
                                                     <h5 className="press-tile-custom">{item.press_release_heading}</h5>
                                                     <p className="mb-2">
                                                         {item.press_release_content
