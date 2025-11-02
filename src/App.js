@@ -199,6 +199,19 @@ const EditMediaResources = React.lazy(() => import('./components/admin2/views/pa
 const ListMediaResourcesVideo = React.lazy(() => import('./components/admin2/views/pages/MediaResources/Video/ResourcesList'))
 const AddMediaResourcesVideo = React.lazy(() => import('./components/admin2/views/pages/MediaResources/Video/ResourcesAdd'))
 const EditMediaResourcesVideo = React.lazy(() => import('./components/admin2/views/pages/MediaResources/Video/ResourcesEdit'))
+// Category 
+const AddHeadingCat = React.lazy(() => import('./components/admin2/views/pages/Category/Cat/AddHeadingCat'))
+const EditHeadingCat = React.lazy(() => import('./components/admin2/views/pages/Category/Cat/EditHeadingCat'))
+const ListHeadingCat = React.lazy(() => import('./components/admin2/views/pages/Category/Cat/ListHeadingCat'))
+// subCategory 
+const AddHeadingSubCat = React.lazy(() => import('./components/admin2/views/pages/Category/SubCat/AddHeadingCat'))
+const EditHeadingSubCat = React.lazy(() => import('./components/admin2/views/pages/Category/SubCat/EditHeadingCat'))
+const ListHeadingSubCat = React.lazy(() => import('./components/admin2/views/pages/Category/SubCat/ListHeadingCat'))
+// investors
+const AddHeadingDataCat = React.lazy(() => import('./components/admin2/views/pages/Category/Data/AddHeadingCat'))
+const EditHeadingDataCat = React.lazy(() => import('./components/admin2/views/pages/Category/Data/EditHeadingCat'))
+const ListHeadingDataCat = React.lazy(() => import('./components/admin2/views/pages/Category/Data/ListHeadingCat'))
+
 
 const App = () => {
   const { isColorModeSet, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
@@ -417,6 +430,18 @@ const App = () => {
             <Route path="/admin/media-resources-video-list" element={<ListMediaResourcesVideo />} />
             <Route path="/admin/add-media-resources-video" element={<AddMediaResourcesVideo />} />
             <Route path="/admin/edit-media-resources-video" element={<EditMediaResourcesVideo />} />
+            {/* category  */}
+            <Route path="/admin/category-list" element={<ListHeadingCat />} />
+            <Route path="/admin/add-category" element={< AddHeadingCat />} />
+            <Route path="/admin/edit-category" element={<EditHeadingCat />} />
+            {/* sub category  */}
+            <Route path="/admin/sub-category-list" element={<ListHeadingSubCat />} />
+            <Route path="/admin/add-sub-category" element={< AddHeadingSubCat />} />
+            <Route path="/admin/edit-sub-category" element={<EditHeadingSubCat />} />
+            {/* Data  */}
+            <Route path="/admin/investors-list" element={<ListHeadingDataCat />} />
+            <Route path="/admin/add-investors" element={< AddHeadingDataCat />} />
+            <Route path="/admin/edit-investors" element={<EditHeadingDataCat />} />
 
           </Routes>
         </Suspense>
