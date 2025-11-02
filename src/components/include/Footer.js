@@ -112,21 +112,31 @@ export default function Footer() {
                                         <a href="mailto:info@dattainfra.com">info@dattainfra.com</a>
                                     </li>
                                 </ul>
-                                <ul className="social-icons d-flex align-items-center justify-content-cente gap-1 mt-4">
+                                <ul className="social-icons d-flex align-items-center justify-content-center gap-1 mt-4">
                                     <li>
-                                        <i className="fa fa-facebook-f custom-fa" />
+                                        <a href="https://www.facebook.com/share/162UfiWyhq/?mibextid=wwXIfr">
+                                            <i className="fa fa-facebook-f custom-fa" />
+                                        </a>
                                     </li>
                                     <li>
-                                        <i className="bi bi-twitter-x custom-fa" />
+                                        <a href='https://x.com/DattaPowerInfra'>
+                                            <i className="bi bi-twitter-x custom-fa" />
+                                        </a>
                                     </li>
                                     <li>
-                                        <i className="fa fa-linkedin custom-fa" />
+                                        <a href='https://www.linkedin.com/company/datta-power-infra/posts/?feedView=all'>
+                                            <i className="fa fa-linkedin custom-fa" />
+                                        </a>
                                     </li>
                                     <li>
-                                        <i className="fa fa-instagram custom-fa" />
+                                        <a href='https://www.instagram.com/dattainfra/'>
+                                            <i className="fa fa-instagram custom-fa" />
+                                        </a>
                                     </li>
                                     <li>
-                                        <i className="fa fa-youtube-play custom-fa" />
+                                        <a href="https://youtube.com/@dattapowerinfra?si=O4eVtLD4h48BLO4f">
+                                            <i className="fa fa-youtube-play custom-fa" />
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
