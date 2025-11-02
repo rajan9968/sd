@@ -2259,19 +2259,3 @@ h2.accordion-header {
 .news-swiper .swiper-slide {
   width: auto !important;
 }
-
-#new-filter .swiper-button-prev,
-#new-filter .swiper-button-next,
-#second-filter .swiper-button-prev,
-#second-filter .swiper-button-next {
-  display: none;
-}
-
-.investors-section .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.news-swiper {
-  width: 100%;
-}
-
-.investors-section #second-filter .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.news-swiper {
-  border-bottom: unset;
-  width: 100%;
-}

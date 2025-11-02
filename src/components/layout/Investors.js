@@ -377,7 +377,7 @@ export default function Investors() {
 
                         <div className="custom-table-container">
                             <div className="row mb-3">
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 col-6">
                                     <label className="pb-1">Year</label>
                                     <Form.Select
                                         className="search-bar"
@@ -397,7 +397,7 @@ export default function Investors() {
 
                                     </Form.Select>
                                 </div>
-                                <div className="col-lg-6 d-flex justify-content-end">
+                                <div className="col-lg-6 col-6 d-flex justify-content-end">
                                     <div>
                                         <label className="pb-1"></label>
                                         <Form.Control
