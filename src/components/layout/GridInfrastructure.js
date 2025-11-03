@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Header from "../include/Header";
 import Footer from '../include/Footer';
 import { Link } from "react-router-dom";
@@ -8,53 +8,114 @@ import 'swiper/css/navigation';
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import api from "../../api/axiosInstance";
 import API_PATH from "../../api/apiPath";
+
+// Animated Counter Component
+const AnimatedCounter = ({ value, duration = 2000 }) => {
+    const [count, setCount] = useState(0);
+    const countRef = useRef(null);
+    const [hasAnimated, setHasAnimated] = useState(false);
+
+    // Parse the number and suffix from the value string
+    const parseValue = (val) => {
+        if (!val) return { number: 0, prefix: '', suffix: '' };
+
+        const str = String(val);
+
+        // Extract number (including decimals)
+        const match = str.match(/(\d+\.?\d*)/);
+        const number = match ? parseFloat(match[0]) : 0;
+
+        // Get everything before the number (prefix)
+        const prefix = str.substring(0, str.indexOf(match ? match[0] : ''));
+
+        // Get everything after the number (suffix like GW, kV, etc.)
+        const suffix = str.substring(str.indexOf(match ? match[0] : '') + (match ? match[0].length : 0));
+
+        return { number, prefix, suffix };
+    };
+
+    const { number: endValue, prefix, suffix } = parseValue(value);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting && !hasAnimated) {
+                    setHasAnimated(true);
+                    animateValue();
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (countRef.current) {
+            observer.observe(countRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, [hasAnimated]);
+
+    const animateValue = () => {
+        const startTime = Date.now();
+
+        const animate = () => {
+            const now = Date.now();
+            const progress = Math.min((now - startTime) / duration, 1);
+
+            // Easing function for smooth animation
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const current = easeOutQuart * endValue;
+
+            setCount(current);
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        };
+
+        requestAnimationFrame(animate);
+    };
+
+    const formatNumber = (num) => {
+        // If it's a whole number, show no decimals
+        if (num === Math.floor(num)) {
+            return Math.floor(num);
+        }
+        // Otherwise keep one decimal place
+        return num.toFixed(1);
+    };
+
+    return (
+        <h3 className="display-4" ref={countRef}>
+            {prefix}{formatNumber(count)}{suffix}
+        </h3>
+    );
+};
+
 export default function GridInfrastructure() {
     const slides2 = [
         { img: "/assets/images/join-1.png", alt: "Join 1" },
         { img: "/assets/images/join-2.png", alt: "Join 2" },
         { img: "/assets/images/join-2.png", alt: "Join 2" },
-        // add more slides here
     ];
+
     const counters = [
         { value: 6.6, label: "Completed Pre-Development Projects" },
         { value: 6.7, label: "Ongoing Pre-Development Projects" },
         { value: 2.7, label: "In-Pipeline Pre-Development Projects" },
     ];
+
     const [bannerData, setBannerData] = useState(null);
     const [keyHighlights, setKeyHighlights] = useState([]);
     const [ourApproach, setOurApproach] = useState([]);
     const [ourProjects, setOurProjects] = useState([]);
 
-    const [counts, setCounts] = useState(counters.map(() => 0));
-
-    useEffect(() => {
-        const duration = 2000; // animation time in ms
-        const steps = 100;
-        const intervalTime = duration / steps;
-
-        const intervals = counters.map((counter, i) => {
-            let step = 0;
-            return setInterval(() => {
-                step++;
-                setCounts((prev) =>
-                    prev.map((val, idx) =>
-                        idx === i ? parseFloat(((counter.value / steps) * step).toFixed(1)) : val
-                    )
-                );
-                if (step >= steps) clearInterval(intervals[i]);
-            }, intervalTime);
-        });
-
-        return () => intervals.forEach(clearInterval);
-    }, []);
-
     const parseDoubleEncodedJSON = (str) => {
         if (!str) return [];
         try {
-            return JSON.parse(JSON.parse(str)); // double-encoded
+            return JSON.parse(JSON.parse(str));
         } catch {
             try {
-                return JSON.parse(str); // single-encoded fallback
+                return JSON.parse(str);
             } catch {
                 console.error("Invalid JSON format:", str);
                 return [];
@@ -68,7 +129,6 @@ export default function GridInfrastructure() {
                 const res = await api.get(`/pre-development/get-pre-development-banners`);
 
                 if (res.data.success) {
-                    // ✅ Find only Pre-Development EPC data
                     const selected = res.data.banners.find(
                         (item) => item.page_type === "" || item.page_type === "Grid Infrastructure"
                     );
@@ -81,7 +141,7 @@ export default function GridInfrastructure() {
                     }
                 }
             } catch (error) {
-                console.error("Error fetching Turnkey EPC Projects data:", error);
+                console.error("Error fetching Grid Infrastructure data:", error);
             }
         };
 
@@ -89,6 +149,7 @@ export default function GridInfrastructure() {
     }, []);
 
     if (!bannerData) return <p className="text-center py-5">Loading...</p>;
+
     return (
         <div>
             <Header />
@@ -98,7 +159,7 @@ export default function GridInfrastructure() {
                         src={
                             bannerData?.banner_image
                                 ? `${API_PATH}/uploads/about-banners/${bannerData.banner_image}`
-                                : "/assets/images/business-banner.png" // fallback
+                                : "/assets/images/business-banner.png"
                         }
                         alt="awards"
                         className="img-fluid desktop-banner"
@@ -113,17 +174,14 @@ export default function GridInfrastructure() {
                             <ul className="path-women-empow">
                                 <li>
                                     <a href="index.php">Home</a>
-
                                 </li>
                                 <li className="text-white">/</li>
                                 <li>
-                                    <a href="#">Grid Infrastructure
-                                    </a>
+                                    <a href="#">Grid Infrastructure</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-
                 </section>
 
                 <section className="powering-progre bg-white py-5">
@@ -155,7 +213,7 @@ export default function GridInfrastructure() {
                     </div>
                 </section>
 
-                {/* ---------- Key Highlights Section ---------- */}
+                {/* ---------- Key Highlights Section with Animated Counter ---------- */}
                 <section className="powering-progres key-highlights bg-white py-5">
                     <div className="container-fluid plr">
                         <div className="text-center mb-5">
@@ -164,7 +222,7 @@ export default function GridInfrastructure() {
                         <div className="row text-center mt-4">
                             {keyHighlights.map((item, index) => (
                                 <div className="col-md-4" key={index}>
-                                    <h3 className="display-4">{item.number}</h3>
+                                    <AnimatedCounter value={item.number} />
                                     <p>{item.text}</p>
                                 </div>
                             ))}
@@ -229,13 +287,14 @@ export default function GridInfrastructure() {
                                             alt="Project"
                                             style={{ border: "2px solid #cda837", borderRadius: "15px" }}
                                         />
-                                        <p className="pt-2">{project.text}</p>
+                                        <p className="pt-2"><strong>{project.text}</strong></p>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
                         </div>
                     </div>
                 </section>
+
                 {/* ready to talk start */}
                 <section className="ready">
                     <div className="container-fluid plr">
@@ -284,5 +343,5 @@ export default function GridInfrastructure() {
             </main>
             <Footer />
         </div>
-    )
+    );
 }

@@ -229,27 +229,12 @@ export default function Header() {
                                             </div>
                                         </li>
                                         <li>
-                                            {/* <div className="menu-li d-flex align-items-center justify-content-between">
+                                            <div className="menu-li d-flex align-items-center justify-content-between">
                                                 <Link to="/newsroom" onClick={closeAllOffcanvas}>
                                                     Newsroom
                                                 </Link>
-                                            </div> */}
-                                            <div className="menu-li d-flex align-items-center justify-content-between">
-                                                <button
-                                                    onClick={() => setActiveSubmenu("newsroom")}
-                                                    className="submenu-toggle"
-                                                    style={{
-                                                        background: "none",
-                                                        border: "none",
-                                                        padding: 0,
-                                                        cursor: "pointer",
-                                                    }}
-                                                >
-                                                    Newsroom
-                                                    <i className="fa fa-angle-right" />
-                                                </button>
-
                                             </div>
+
                                         </li>
                                         <li>
                                             <div className="menu-li d-flex align-items-center justify-content-between">
