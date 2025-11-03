@@ -950,9 +950,18 @@
         margin-top: 2em;
     }
 
-        svg.text-color.mt-1.fs-5 {
-            max-width: 2%;
-        }
+    .social-icons {
+        justify-content: space-between !important;
+    }
+
+    .custom-carerr-mobile {
+        zoom: 100% !important;
+    }
+
+    svg.text-color.mt-1.fs-5 {
+        max-width: 2%;
+    }
+
     .top-banner {
         height: 31em !important;
     }
@@ -1017,6 +1026,7 @@
 
     .cul-pot {
         min-height: 38em !important;
+        margin-bottom: 0 !important;
     }
 
     .cul-pot #history-carousel {
@@ -2191,9 +2201,9 @@
         width: 45%;
     }
 
-    .social-icons {
+    /* .social-icons {
         justify-content: unset !important;
-    }
+    } */
 
     .offcanvas-body {
         zoom: 82%;
@@ -2350,7 +2360,7 @@
     }
 
     .slide {
-        background-position: left;
+        background-position: right;
         height: 87%;
     }
 
@@ -2525,9 +2535,9 @@
         width: 45%;
     }
 
-    .social-icons {
+    /* .social-icons {
         justify-content: unset !important;
-    }
+    } */
 
     .offcanvas-body {
         zoom: 82%;

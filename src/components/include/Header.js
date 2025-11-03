@@ -315,7 +315,7 @@ export default function Header() {
                                     onClick={() => setActiveSubmenu(null)}
                                     aria-label="Close"
                                 >
-                                    <img src="assets/images/cross.svg" alt="" />
+                                    <FaX className="fax-icon" />
                                 </button>
                             </Offcanvas.Header>
 
@@ -356,7 +356,7 @@ export default function Header() {
                                     onClick={() => setActiveSubmenu(null)}
                                     aria-label="Close"
                                 >
-                                    <img src="assets/images/cross.svg" alt="" />
+                                    <FaX className="fax-icon" />
                                 </button>
                             </Offcanvas.Header>
 
@@ -401,7 +401,7 @@ export default function Header() {
                                     onClick={() => setActiveSubmenu(null)}
                                     aria-label="Close"
                                 >
-                                    <img src="assets/images/cross.svg" alt="" />
+                                    <FaX className="fax-icon" />
                                 </button>
                             </Offcanvas.Header>
 
@@ -442,7 +442,7 @@ export default function Header() {
                                     onClick={() => setActiveSubmenu(null)}
                                     aria-label="Close"
                                 >
-                                    <img src="assets/images/cross.svg" alt="" />
+                                    <FaX className="fax-icon" />
                                 </button>
                             </Offcanvas.Header>
 

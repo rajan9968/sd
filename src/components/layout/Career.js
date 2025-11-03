@@ -199,7 +199,7 @@ const Careers = () => {
                             >
                                 {whyJoin.map((item, index) => (
                                     <SwiperSlide key={index}>
-                                        <div className="card-custom">
+                                        <div className="card-custom custom-carerr-mobile">
                                             {item.icon && (
                                                 <img
                                                     src={`${API_PATH}/uploads/careers/${item.icon}`}
