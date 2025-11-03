@@ -15,13 +15,13 @@ export default function Footer() {
                                     <h5>About Us</h5>
                                     <ul className="footer-links">
                                         <li>
-                                            <a href="#">Who We Are</a>
+                                            <a href="/about-us/who-we-are">Who We Are</a>
                                         </li>
                                         <li>
-                                            <a href="#">Leadership</a>
+                                            <a href="/about-us/leadership-team">Leadership</a>
                                         </li>
                                         <li>
-                                            <a href="#">Project Portfolio</a>
+                                            <a href="/about-us/project-portfolio">Project Portfolio</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -29,18 +29,18 @@ export default function Footer() {
                                     <h5>Business</h5>
                                     <ul className="footer-links">
                                         <li>
-                                            <a href="#">Pre-Development EPC</a>
+                                            <a href="/business/pre-development">Pre-Development EPC</a>
                                         </li>
                                         <li>
-                                            <a href="#">Turnkey EPC Projects</a>
+                                            <a href="/business/epc-project">Turnkey EPC Projects</a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/business/grid-infrastructure">
                                                 Grid Infrastructure
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/business/independent-power-producer">
                                                 Independent Power
                                                 <br /> Producer
                                             </a>
@@ -52,13 +52,13 @@ export default function Footer() {
                                     <h5>Resources</h5>
                                     <ul className="footer-links">
                                         <li>
-                                            <a href="#">Blogs</a>
+                                            <a href="/blogs">Blogs</a>
                                         </li>
                                         <li>
-                                            <a href="#">Case Studies</a>
+                                            <a href="/case-studies">Case Studies</a>
                                         </li>
                                         <li>
-                                            <a href="#">FAQs</a>
+                                            <a href="/faqs">FAQs</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -66,31 +66,31 @@ export default function Footer() {
                                     <h5>News Room</h5>
                                     <ul className="footer-links">
                                         <li>
-                                            <a href="#">Press Release</a>
+                                            <a href="/press-release">Press Release</a>
                                         </li>
                                         <li>
-                                            <a href="#">Media Coverage</a>
+                                            <a href="/media-coverages">Media Coverage</a>
                                         </li>
                                         <li>
-                                            <a href="#">Media Resources</a>
+                                            <a href="/media-resources">Media Resources</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h5>
-                                        <Link to="/" className="text-decoration-none text-white">Culture</Link>
+                                        <Link to="/culture" className="text-decoration-none text-white">Culture</Link>
                                     </h5>
                                     <h5>
-                                        <Link to="/" className="text-decoration-none text-white">Investor</Link>
+                                        <Link to="/investors" className="text-decoration-none text-white">Investor</Link>
                                     </h5>
                                     <h5>
-                                        <Link to="/" className="text-decoration-none text-white">Awards</Link>
+                                        <Link to="/awards" className="text-decoration-none text-white">Awards</Link>
                                     </h5>
                                     <h5>
-                                        <Link to="/" className="text-decoration-none text-white">Careers</Link>
+                                        <Link to="/careers" className="text-decoration-none text-white">Careers</Link>
                                     </h5>
                                     <h5>
-                                        <Link to="/" className="text-decoration-none text-white">Contact</Link>
+                                        <Link to="/contact-us" className="text-decoration-none text-white">Contact</Link>
                                     </h5>
                                 </div>
                             </div>

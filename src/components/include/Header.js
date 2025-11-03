@@ -229,6 +229,11 @@ export default function Header() {
                                             </div>
                                         </li>
                                         <li>
+                                            {/* <div className="menu-li d-flex align-items-center justify-content-between">
+                                                <Link to="/newsroom" onClick={closeAllOffcanvas}>
+                                                    Newsroom
+                                                </Link>
+                                            </div> */}
                                             <div className="menu-li d-flex align-items-center justify-content-between">
                                                 <button
                                                     onClick={() => setActiveSubmenu("newsroom")}
