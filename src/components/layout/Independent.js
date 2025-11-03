@@ -302,7 +302,7 @@ export default function Independent() {
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-center gap-3 align-items-center text-center">
                                     <h2>Talk to an Expert</h2>
-                                    <div className="btn-design-new">
+                                    <div className="btn-design-new align-items-center">
                                         <a href="/contact-us" className="custom-btn">
                                             Contact Us
                                         </a>

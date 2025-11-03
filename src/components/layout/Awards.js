@@ -15,6 +15,8 @@ export default function Awards() {
     const [awardsData, setAwardsData] = useState([]);
     const [spotlight, setSpotlight] = useState([]);
     const [allAwards, setAllAwards] = useState([]);
+    const [visibleCount, setVisibleCount] = useState(3); // show 3 initially
+
     useEffect(() => {
         const fetchAwardsData = async () => {
             try {
@@ -39,6 +41,10 @@ export default function Awards() {
 
         fetchAwardsData();
     }, []);
+    // Function to handle load more click
+    const handleLoadMore = () => {
+        setVisibleCount((prev) => prev + 3); // show 3 more each click
+    };
     return (
         <div>
             <Header />
@@ -88,6 +94,10 @@ export default function Awards() {
                                 navigation={{
                                     prevEl: ".swiper-button-prev",
                                     nextEl: ".swiper-button-next",
+                                }}
+                                autoplay={{
+                                    delay: 2000,
+                                    disableOnInteraction: false,
                                 }}
                                 loop={true}
                                 breakpoints={{
@@ -160,7 +170,7 @@ export default function Awards() {
                         </div>
 
                         <div className="row">
-                            {allAwards.map((item, index) => (
+                            {allAwards.slice(0, visibleCount).map((item, index) => (
                                 <div className="col-lg-4 mb-4" key={index}>
                                     <Link to="#" className="text-black text-decoration-none">
                                         <div className="news-box rounded">
@@ -185,13 +195,16 @@ export default function Awards() {
                                 </div>
                             ))}
 
-                            <div className="col-lg-12 my-5 text-center d-flex justify-content-center">
-                                <div className="btn-design">
-                                    <a href="#" className="custom-btn">
-                                        Load More
-                                    </a>
+                            {/* Load More Button (Your same structure) */}
+                            {visibleCount < allAwards.length && (
+                                <div className="col-lg-12 my-5 text-center d-flex justify-content-center">
+                                    <div className="btn-design">
+                                        <a href="#" className="custom-btn" onClick={handleLoadMore}>
+                                            Load More
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </div>
                 </section>

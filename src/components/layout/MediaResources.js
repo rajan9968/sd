@@ -135,7 +135,7 @@ export default function MediaResources() {
                 <section className='leader-section pb-5'>
                     <div className="container-fluid plr">
                         <ul
-                            className="nav nav-pills mb-3 position-unset"
+                            className="nav nav-pills mb-3 position-unset justify-content-start"
                             id="pills-tab"
                             role="tablist"
                         >

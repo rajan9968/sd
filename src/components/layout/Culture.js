@@ -230,7 +230,7 @@ export default function Culture() {
                     </div>
                 </section>
                 <section
-                    className="our-portfolio cul-pot mb-4 bg-white"
+                    className="our-portfolio cul-pot bg-white"
                     style={{
                         background: initiatives.length
                             ? `url(${initiatives[activeIndex].bgImage}) no-repeat center center/cover`
