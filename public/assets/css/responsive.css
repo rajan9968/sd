@@ -946,6 +946,29 @@
 
 /* 676 7686  */
 @media (max-width: 768px) {
+    .trusted-logos {
+        margin-top: 2em;
+    }
+
+        svg.text-color.mt-1.fs-5 {
+            max-width: 2%;
+        }
+    .top-banner {
+        height: 31em !important;
+    }
+
+    .slide-content {
+        position: absolute;
+        height: 58%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 6%;
+        color: white;
+        z-index: 2;
+        padding-bottom: 4em;
+        bottom: 0;
+    }
 
     #new-filter .swiper-button-prev,
     #new-filter .swiper-button-next,
@@ -1945,7 +1968,7 @@
     }
 
     .top-banner {
-        height: 29em;
+        height: 31em;
     }
 
     .custom-view {
