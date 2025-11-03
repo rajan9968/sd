@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -48,7 +48,86 @@ const Careers = () => {
 
         fetchCareersData();
     }, []);
+    const AnimatedCounter = ({ value, duration = 2000 }) => {
+        const [count, setCount] = useState(0);
+        const countRef = useRef(null);
+        const [hasAnimated, setHasAnimated] = useState(false);
 
+        // Parse the number and suffix from the value string
+        const parseValue = (val) => {
+            if (!val) return { number: 0, prefix: '', suffix: '' };
+
+            const str = String(val);
+
+            // Extract number (including decimals)
+            const match = str.match(/(\d+\.?\d*)/);
+            const number = match ? parseFloat(match[0]) : 0;
+
+            // Get everything before the number (prefix)
+            const prefix = str.substring(0, str.indexOf(match ? match[0] : ''));
+
+            // Get everything after the number (suffix like +, GW, %, Cities, etc.)
+            const suffix = str.substring(str.indexOf(match ? match[0] : '') + (match ? match[0].length : 0));
+
+            return { number, prefix, suffix };
+        };
+
+        const { number: endValue, prefix, suffix } = parseValue(value);
+
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    if (entries[0].isIntersecting && !hasAnimated) {
+                        setHasAnimated(true);
+                        animateValue();
+                    }
+                },
+                { threshold: 0.1 }
+            );
+
+            if (countRef.current) {
+                observer.observe(countRef.current);
+            }
+
+            return () => observer.disconnect();
+        }, [hasAnimated]);
+
+        const animateValue = () => {
+            const startTime = Date.now();
+
+            const animate = () => {
+                const now = Date.now();
+                const progress = Math.min((now - startTime) / duration, 1);
+
+                // Easing function for smooth animation
+                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                const current = easeOutQuart * endValue;
+
+                setCount(current);
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            };
+
+            requestAnimationFrame(animate);
+        };
+
+        const formatNumber = (num) => {
+            // If it's a whole number, show no decimals
+            if (num === Math.floor(num)) {
+                return Math.floor(num);
+            }
+            // Otherwise keep one decimal place
+            return num.toFixed(1);
+        };
+
+        return (
+            <h3 className="display-4" ref={countRef}>
+                {prefix}{formatNumber(count)}{suffix}
+            </h3>
+        );
+    };
     return (
         <div>
             <Header />
@@ -150,7 +229,7 @@ const Careers = () => {
                                     key={index}
                                     className={`col-md-4 ${index !== keyHighlights.length - 1 ? "border-right" : ""}`}
                                 >
-                                    <h3 className="display-4">{item.number}</h3>
+                                    <AnimatedCounter value={item.number} />
                                     <p>{item.text}</p>
                                 </div>
                             ))}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Header from "../include/Header";
 import Footer from '../include/Footer';
 import { Link } from "react-router-dom";
@@ -88,7 +88,62 @@ export default function PreDevelopment() {
 
         fetchData();
     }, []);
+    const AnimatedCounter = ({ end, duration = 2000, suffix = '' }) => {
+        const [count, setCount] = useState(0);
+        const countRef = useRef(null);
+        const [hasAnimated, setHasAnimated] = useState(false);
 
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    if (entries[0].isIntersecting && !hasAnimated) {
+                        setHasAnimated(true);
+                        animateValue();
+                    }
+                },
+                { threshold: 0.1 }
+            );
+
+            if (countRef.current) {
+                observer.observe(countRef.current);
+            }
+
+            return () => observer.disconnect();
+        }, [hasAnimated]);
+
+        const animateValue = () => {
+            const startTime = Date.now();
+            const endValue = parseFloat(end);
+
+            const animate = () => {
+                const now = Date.now();
+                const progress = Math.min((now - startTime) / duration, 1);
+
+                // Easing function for smooth animation
+                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                const current = easeOutQuart * endValue;
+
+                setCount(current);
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            };
+
+            requestAnimationFrame(animate);
+        };
+
+        const formatNumber = (num) => {
+            // For numbers like 6.6, keep one decimal place
+            return num.toFixed(1);
+        };
+
+        return (
+            <h3 className="display-4" ref={countRef}>
+                {formatNumber(count)}{suffix}
+            </h3>
+        );
+    };
     if (!bannerData) return <p className="text-center py-5">Loading...</p>;
     return (
         <div>
@@ -164,7 +219,10 @@ export default function PreDevelopment() {
                         <div className="row text-center mt-4">
                             {keyHighlights.map((item, index) => (
                                 <div className="col-md-4" key={index}>
-                                    <h3 className="display-4">{item.number}</h3>
+                                    <AnimatedCounter
+                                        end={item.number}
+                                        suffix=" GW"
+                                    />
                                     <p>{item.text}</p>
                                 </div>
                             ))}
@@ -229,7 +287,7 @@ export default function PreDevelopment() {
                                             alt="Project"
                                             style={{ border: "2px solid #cda837", borderRadius: "15px" }}
                                         />
-                                        <p className="pt-2">{project.text}</p>
+                                        <p className="pt-2"><strong>{project.text}</strong></p>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>

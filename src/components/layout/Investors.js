@@ -448,7 +448,7 @@ export default function Investors() {
 
                             {/* 🔢 Pagination */}
 
-                            <Pagination className="custom-pagination">
+                            <Pagination className="custom-pagination mb-0 pb-3">
                                 <div> <p>Showing 1-20 of 20 items</p></div>
                                 <div className="d-flex gap-2"> <Pagination.Prev
                                     onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}

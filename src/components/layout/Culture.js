@@ -245,7 +245,7 @@ export default function Culture() {
                     <div className="container-fluid">
                         {/* Dynamic content-text */}
                         <div className="content-text cul-sec">
-                            <h3>
+                            <h3 className="pp-title-h">
                                 {initiatives[activeIndex]?.title} <br />
                             </h3>
                             <p>{initiatives[activeIndex]?.description}</p>
@@ -282,10 +282,20 @@ export default function Culture() {
                                             </div>
                                             <div>
                                                 <div className="history-content">
-                                                    <p>{item.title}</p>
+                                                    {(() => {
+                                                        const words = item.title.trim().split(" ");
+                                                        const lastWord = words.pop(); // remove the last word
+                                                        const firstPart = words.join(" "); // join remaining words
+                                                        return (
+                                                            <p>
+                                                                {firstPart} <br /> {lastWord}
+                                                            </p>
+                                                        );
+                                                    })()}
                                                 </div>
+
                                                 <div className="number-part">
-                                                    <div className="outline-text">{item.number}</div>
+                                                    <div className="outline-text">&nbsp;</div>
                                                 </div>
                                             </div>
                                         </div>

@@ -52,12 +52,13 @@ export default function ProjectPortfolio() {
 
         fetchPageHeading();
     }, []);
+    // const [projects, setProjects] = useState([]);
+    const [visibleCount, setVisibleCount] = useState(3); // show 3 initially
+
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const res = await api.get(
-                    "/portfolio-overview/get-portfolio-overview"
-                );
+                const res = await api.get("/portfolio-overview/get-portfolio-overview");
                 if (res.data.success && res.data.banners?.length > 0) {
                     setProjects(res.data.banners);
                 }
@@ -67,6 +68,10 @@ export default function ProjectPortfolio() {
         };
         fetchProjects();
     }, []);
+
+    const handleLoadMore = () => {
+        setVisibleCount((prevCount) => prevCount + 3);
+    };
     return (
         <div>
             <Header />
@@ -110,8 +115,11 @@ export default function ProjectPortfolio() {
                         </div>
                         <div className="row">
                             {projects.length > 0 ? (
-                                projects.map((project) => (
-                                    <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4" key={project.id}>
+                                projects.slice(0, visibleCount).map((project) => (
+                                    <div
+                                        className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4"
+                                        key={project.id}
+                                    >
                                         <div className="news-box rounded">
                                             <div className="new-image">
                                                 <img
@@ -133,12 +141,25 @@ export default function ProjectPortfolio() {
                             ) : (
                                 <p>Loading projects...</p>
                             )}
-                            <div className="col-lg-12 my-5 text-center d-flex justify-content-center">
-                                <div className="btn-design">
-                                    <a href="" className="custom-btn">
-                                        Load More
-                                    </a>
-                                </div></div>
+
+                            {/* Load More Button */}
+                            {visibleCount < projects.length && (
+                                <div className="col-lg-12 my-5 text-center d-flex justify-content-center">
+                                    <div className="btn-design">
+                                        <a
+                                            href="#"
+                                            className="custom-btn"
+                                            onClick={(e) => {
+                                                e.preventDefault(); // stop page reload
+                                                setVisibleCount((prevCount) => prevCount + 3); // show 3 more
+                                            }}
+                                        >
+                                            Load More
+                                        </a>
+                                    </div>
+                                </div>
+                            )}
+
                         </div>
                     </div>
                 </section>

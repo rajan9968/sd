@@ -9,9 +9,11 @@ import API_PATH from "../../api/apiPath";
 export default function MediaResources() {
     const [photos, setPhotos] = useState([]);
     const [videos, setVideos] = useState([]);
+    const [visiblePhotoCount, setVisiblePhotoCount] = useState(3);
+    const [visibleVideoCount, setVisibleVideoCount] = useState(3);
 
+    // ✅ Fetch Photos
     useEffect(() => {
-        // Fetch photos from API
         const fetchPhotos = async () => {
             try {
                 const response = await api.get("/resources-photo/get-resources-photos");
@@ -22,23 +24,23 @@ export default function MediaResources() {
                 console.error("Error fetching photos:", error);
             }
         };
-
         fetchPhotos();
     }, []);
 
-    // Initialize lightbox once data is loaded
+    // ✅ Lightbox for Photos
     useEffect(() => {
         if (photos.length > 0) {
             const lightbox = GLightbox({
-                selector: ".glightbox",
+                selector: ".glightbox-photo",
                 touchNavigation: true,
                 loop: true,
             });
             return () => lightbox.destroy();
         }
     }, [photos]);
+
+    // ✅ Fetch Videos
     useEffect(() => {
-        // Fetch video data
         const fetchVideos = async () => {
             try {
                 const response = await api.get("/resources-video/get-resources-videos");
@@ -49,15 +51,14 @@ export default function MediaResources() {
                 console.error("Error fetching videos:", error);
             }
         };
-
         fetchVideos();
     }, []);
 
-    // Initialize lightbox for video popups
+    // ✅ Lightbox for Videos
     useEffect(() => {
         if (videos.length > 0) {
             const lightbox = GLightbox({
-                selector: ".glightbox",
+                selector: ".glightbox-video",
                 touchNavigation: true,
                 autoplayVideos: true,
             });
@@ -65,11 +66,30 @@ export default function MediaResources() {
         }
     }, [videos]);
 
-    // ✅ Helper: get YouTube thumbnail from link
+    // ✅ YouTube Thumbnail Helper
     const getYouTubeThumbnail = (url) => {
         const match = url.match(/(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([^&]+)/);
-        return match ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg` : "/assets/images/video-placeholder.jpg";
+        return match
+            ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg`
+            : "/assets/images/video-placeholder.jpg";
     };
+
+    // ✅ Load More / Less — Photos
+    const handlePhotoLoadMore = (e) => {
+        e.preventDefault();
+        setVisiblePhotoCount((prev) =>
+            prev < photos.length ? Math.min(prev + 3, photos.length) : 3
+        );
+    };
+
+    // ✅ Load More / Less — Videos
+    const handleVideoLoadMore = (e) => {
+        e.preventDefault();
+        setVisibleVideoCount((prev) =>
+            prev < videos.length ? Math.min(prev + 3, videos.length) : 3
+        );
+    };
+
     return (
         <div>
             <Header />
@@ -158,12 +178,12 @@ export default function MediaResources() {
                             >
                                 <div className="row">
                                     {photos.length > 0 ? (
-                                        photos.map((item) => (
+                                        photos.slice(0, visiblePhotoCount).map((item) => (
                                             <div className="col-lg-4 mb-3 col-md-6" key={item.id}>
-                                                <div className="team-card shadow rounded bg-light h-100 cursor-pointer">
+                                                <div className="team-card shadow rounded bg-light h-100 cursor-pointer custom-mobile-tt">
                                                     <a
                                                         href={`${API_PATH}/uploads/about-banners/${item.banner_image}`}
-                                                        className="glightbox"
+                                                        className="glightbox-photo"
                                                         data-gallery="resources-gallery"
                                                         data-title={item.sub_heading}
                                                     >
@@ -174,15 +194,39 @@ export default function MediaResources() {
                                                         />
                                                     </a>
                                                     <div className="team-name px-3 pb-3">
-                                                        <p className="blog-title">
-                                                            {item.sub_heading}
-                                                        </p>
+                                                        <p className="blog-title">{item.sub_heading}</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         ))
                                     ) : (
                                         <p className="text-center py-5">Loading photos...</p>
+                                    )}
+
+                                    {photos.length > 3 && (
+                                        <div className="my-3 text-center d-flex justify-content-center">
+                                            <div className="btn-design contact-submit-btn" style={{
+                                                left: "unset"
+                                            }}>
+                                                <a href="#" onClick={handlePhotoLoadMore} className="custom-btn">
+                                                    {visiblePhotoCount < photos.length ? "Load More" : "Load Less"}
+                                                    <svg
+                                                        viewBox="-19.04 0 75.804 75.804"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        fill="#ffffff"
+                                                        stroke="#ffffff"
+                                                    >
+                                                        <g id="Group_65" transform="translate(-831.568 -384.448)">
+                                                            <path
+                                                                id="Path_57"
+                                                                d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z"
+                                                                fill="#ffffff"
+                                                            ></path>
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
                                     )}
                                 </div>
 
@@ -196,12 +240,12 @@ export default function MediaResources() {
                             >
                                 <div className="row">
                                     {videos.length > 0 ? (
-                                        videos.map((item) => (
+                                        videos.slice(0, visibleVideoCount).map((item) => (
                                             <div className="col-lg-4 mb-3 col-md-6" key={item.id}>
                                                 <div className="team-card shadow rounded bg-light h-100 cursor-pointer">
                                                     <a
                                                         href={item.video_url}
-                                                        className="glightbox"
+                                                        className="glightbox-video"
                                                         data-gallery="video-gallery"
                                                         data-title={item.sub_heading}
                                                     >
@@ -220,9 +264,33 @@ export default function MediaResources() {
                                     ) : (
                                         <p className="text-center py-5">Loading videos...</p>
                                     )}
+
+                                    {videos.length > 3 && (
+                                        <div className="my-3 text-center d-flex justify-content-center">
+                                            <div className="btn-design contact-submit-btn" style={{
+                                                left: "unset"
+                                            }}>
+                                                <a href="#" onClick={handleVideoLoadMore} className="custom-btn">
+                                                    {visibleVideoCount < videos.length ? "Load More" : "Load Less"}
+                                                    <svg
+                                                        viewBox="-19.04 0 75.804 75.804"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        fill="#ffffff"
+                                                        stroke="#ffffff"
+                                                    >
+                                                        <g id="Group_65" transform="translate(-831.568 -384.448)">
+                                                            <path
+                                                                id="Path_57"
+                                                                d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z"
+                                                                fill="#ffffff"
+                                                            ></path>
+                                                        </g>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
-
-
                             </div>
                         </div>
 

@@ -668,7 +668,7 @@ export default function Home() {
                                                     </p>
                                                 </div>
                                                 <div className="number-part">
-                                                    <div className="outline-text">{slide.number}</div>
+                                                    {/* <div className="outline-text">{slide.number}</div> */}
                                                 </div>
                                             </div>
                                         </div>
