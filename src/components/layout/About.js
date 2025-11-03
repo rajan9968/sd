@@ -285,11 +285,10 @@ export default function About() {
                                 modules={[Navigation, Autoplay]}
                                 spaceBetween={20}
                                 slidesPerView={4}
-                                // autoplay={{
-                                //     delay: 3000,
-                                //     disableOnInteraction: false,
-                                //     pauseOnMouseEnter: true
-                                // }}
+                                autoplay={{
+                                    delay: 2000,
+                                    disableOnInteraction: false,
+                                }}
                                 navigation={{
                                     prevEl: '.swiper-button-prev',
                                     nextEl: '.swiper-button-next',

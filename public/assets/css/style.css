@@ -2256,6 +2256,10 @@ h2.accordion-header {
   /* Add some padding for better appearance */
 }
 
-.news-swiper .swiper-slide {
+#new-filter .news-swiper .swiper-slide {
+  width: auto !important;
+}
+
+#second-filter .news-swiper .swiper-slide {
   width: auto !important;
 }
