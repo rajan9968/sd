@@ -669,6 +669,400 @@
 }
 
 @media only screen and (min-width: 1366px) and (max-width: 1366px) {
+    .stats-container {
+        margin-bottom: 2em;
+    }
+
+    .pp-title-h {
+        height: 104px;
+    }
+
+    .investors-section .swiper-button-prev,
+    .investors-section .swiper-button-next {
+        top: 100% !important;
+    }
+
+    .cat-name {
+        zoom: 82%;
+    }
+
+    .logo img {
+        max-width: 70%;
+    }
+
+    .custom-css-in-blog {
+        height: 65% !important;
+    }
+
+    .contact-submit-btn {
+        position: unset;
+    }
+
+    .press-tile-custom {
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+
+    .newsroom p {
+        font-size: 0.8em;
+    }
+
+    .costom-community {
+        max-height: 6em;
+    }
+
+    .cistom-gridifnra .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 16%;
+    }
+
+    .custom-epc-dosts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 10%;
+        left: 46%;
+    }
+
+    .custom-ind-dosts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 21%;
+        padding: 8px;
+        left: 41%;
+    }
+
+    .custom-ind-dosts .swiper-pagination-bullet {
+        height: 7px;
+    }
+
+    .key-highlights .display-4 {
+        font-size: 2em;
+    }
+
+    .award-title {
+        font-size: 1em;
+    }
+
+    .pro-ti {
+        font-size: 0.8em;
+    }
+
+    .custom-donts .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 22%;
+        left: 39%;
+    }
+
+    .content-news-para {
+        font-size: 0.8em;
+    }
+
+    .about-card-second {
+        height: 21em !important;
+    }
+
+    .about-core-card-h {
+        height: 21em !important;
+    }
+
+    .about-state,
+    .about-location {
+        font-size: 1em;
+    }
+
+    .trusted-section .swiper-wrapper {
+        align-items: center;
+    }
+
+    .copy-section {
+        zoom: 79%;
+    }
+
+    .social-icons {
+        justify-content: unset !important;
+    }
+
+    .nav .nav-links a {
+        font-size: 1em;
+    }
+
+    .slide-content {
+        padding: 0px 9%;
+    }
+
+    .stat-item {
+        padding-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 0.8em;
+    }
+
+    .slide-title {
+        font-size: 3em;
+        margin-bottom: 7rem;
+    }
+
+    .stat-number {
+        font-size: 2.2em;
+    }
+
+    .power-content h4 {
+        font-size: 1.3em;
+    }
+
+    .section-text,
+    .sus-para,
+    .content-text p,
+    .power-content p {
+        font-size: 0.8em;
+    }
+
+    .slider-nav {
+        bottom: 5em;
+        left: 3%;
+    }
+
+    .our-business .row {
+        --bs-gutter-y: unset;
+        --bs-gutter-x: unset;
+    }
+
+    .card-custom h3 {
+        font-size: 17px;
+        padding: 0 20px;
+    }
+
+    .card-image {
+        max-width: 60%;
+        height: 21%;
+        object-fit: cover;
+        margin-bottom: 1.3em;
+    }
+
+    .trust-logo {
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        max-width: 12%;
+    }
+
+    .card-custom p {
+        padding: 0;
+    }
+
+    .card-custom p {
+        font-size: 0.8em;
+    }
+
+    .card-custom {
+        height: 80%;
+    }
+
+    .group-icon {
+        text-align: end;
+    }
+
+    .group-icon img {
+        max-width: 70%;
+    }
+
+    .powering-progress .btn-design-new {
+        padding: 0.7em 1em;
+        width: 39%;
+        font-size: 0.8em;
+        align-items: center;
+    }
+
+    .btn-design-new svg {
+        max-width: 18%;
+        height: 19px;
+    }
+
+    .content-text h3 {
+        font-size: 2.4em;
+    }
+
+    .custom-size-image {
+        height: 83px;
+    }
+
+    #history-carousel {
+        padding: 14px;
+        bottom: -9%;
+        right: -32px;
+    }
+
+    .history-box {
+        min-width: 300px;
+    }
+
+    .history-image {
+        width: 46%;
+    }
+
+    .history-image img {
+        width: 100%;
+    }
+
+    .outline-text {
+        font-size: 0.8em;
+    }
+
+
+    .history-box .history-content p {
+        font-size: 0.8em;
+    }
+
+    #history-carousel .swiper-button-next {
+        right: -1% !important;
+        top: 92% !important;
+        zoom: 79%;
+    }
+
+    #history-carousel .swiper-button-prev {
+        /* top: 38%; */
+        left: 95.7% !important;
+        zoom: 78%;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 8%;
+        padding: 4px;
+        height: 27px;
+    }
+
+    .home-all-card {
+        height: 23em !important;
+    }
+
+    .swiper-pagination-bullet {
+        height: 5px;
+    }
+
+    #history-carousel .swiper-button-prev,
+    #history-carousel .swiper-button-next {
+        width: 63px !important;
+        height: 75px !important;
+    }
+
+    .btn-design {
+        width: 16%;
+        bottom: 5px;
+        padding: 0.7em 1em;
+        font-size: 0.8em;
+        align-items: center;
+    }
+
+    .btn-design svg {
+        max-width: 18%;
+        height: 21px;
+    }
+
+    .join-us .btn-design-new {
+        padding: 0.7em 1em;
+        width: 22%;
+        font-size: 0.8em;
+        align-items: center;
+    }
+
+    .join-us .btn-design-new svg {
+        max-width: 11%;
+        height: 22px;
+    }
+
+    #new-carousel .swiper-button-prev {
+        left: -7% !important;
+    }
+
+    #new-carousel .swiper-button-next {
+        right: -7% !important;
+    }
+
+    .news-content .btn-design-new {
+        padding: 0.7em 1em;
+        width: 44%;
+        font-size: 0.8em;
+        align-items: center;
+    }
+
+    .news-content .btn-design-new svg {
+        max-width: 17%;
+        height: 21px;
+    }
+
+    .footer-menu.contact {
+        padding-left: 4em;
+    }
+
+    .news-box:hover .content-news-para,
+    .news-box:hover .btn-design-new {
+        font-size: 0.8em;
+    }
+
+    .ready h2 {
+        font-size: 2em;
+    }
+
+    .ready .btn-design-new {
+        width: 14%;
+        font-size: 0.8em;
+    }
+
+    .trust-logo {
+        max-width: 62%;
+    }
+
+    .vision-section .card-custom {
+        height: 24em;
+    }
+
+    .about-banner-caption h2,
+    .leadership-banner-caption h2 {
+        font-size: 2.5em;
+    }
+
+    .team-name {
+        padding: 1em;
+        padding-top: 0.5em;
+    }
+
+    .team-name h5 {
+        font-size: 1em;
+    }
+
+    .team-name p {
+        font-size: 0.8em;
+    }
+
+    .team-card {
+
+        height: 26em;
+    }
+
+    .leader-section .nav-pills .nav-link.active,
+    .leader-section .nav-pills .show>.nav-link {
+        font-size: 1.2em;
+    }
+
+    .leader-section .nav-pills .nav-link {
+        font-size: 1.2em;
+    }
+
+    .leader-section .modal-dialog {
+        max-width: 800px;
+    }
+
+    .leader-section .modal-content {
+        padding: 1rem !important;
+    }
+
+    .member-name {
+        font-size: 1.5em;
+    }
+
+    .member-postion {
+        font-size: 1.2em;
+    }
+
+    .project-section .btn-design {
+        position: unset;
+        left: unset;
+    }
+
     .work-with-us-card {
         top: 40%;
 
