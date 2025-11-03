@@ -355,6 +355,31 @@ const _nav = [
       },
     ],
   },
+  {
+    component: CNavGroup,
+    name: 'Invester Page',
+    to: '/base',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Category',
+        to: '/admin/category-list'
+      },
+      {
+        component: CNavItem,
+        name: 'Sub Category',
+        to: '/admin/sub-category-list',
+        icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Add Investors',
+        to: '/admin/investors-list',
+        icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+      },
+    ],
+  },
 
 ]
 
