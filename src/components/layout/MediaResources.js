@@ -28,16 +28,17 @@ export default function MediaResources() {
     }, []);
 
     // ✅ Lightbox for Photos
-    useEffect(() => {
-        if (photos.length > 0) {
-            const lightbox = GLightbox({
-                selector: ".glightbox-photo",
-                touchNavigation: true,
-                loop: true,
-            });
-            return () => lightbox.destroy();
-        }
-    }, [photos]);
+useEffect(() => {
+    if (photos.length > 0) {
+        const lightbox = GLightbox({
+            selector: ".glightbox-photo",
+            touchNavigation: true,
+            loop: true,
+        });
+        return () => lightbox.destroy();
+    }
+}, [photos, visiblePhotoCount]); // 👈 added visiblePhotoCount here
+
 
     // ✅ Fetch Videos
     useEffect(() => {
@@ -56,15 +57,16 @@ export default function MediaResources() {
 
     // ✅ Lightbox for Videos
     useEffect(() => {
-        if (videos.length > 0) {
-            const lightbox = GLightbox({
-                selector: ".glightbox-video",
-                touchNavigation: true,
-                autoplayVideos: true,
-            });
-            return () => lightbox.destroy();
-        }
-    }, [videos]);
+    if (videos.length > 0) {
+        const lightbox = GLightbox({
+            selector: ".glightbox-video",
+            touchNavigation: true,
+            autoplayVideos: true,
+        });
+        return () => lightbox.destroy();
+    }
+}, [videos, visibleVideoCount]); // 👈 added visibleVideoCount here
+
 
     // ✅ YouTube Thumbnail Helper
     const getYouTubeThumbnail = (url) => {

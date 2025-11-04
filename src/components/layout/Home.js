@@ -281,6 +281,9 @@ export default function Home() {
 
         fetchCareerImages();
     }, []);
+     const createSlug = (text) =>
+    text?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+
     useEffect(() => {
         const fetchLatestData = async () => {
             try {
@@ -315,43 +318,63 @@ export default function Home() {
                 // Create combined array
                 const combinedData = [];
 
-                if (latestPress) {
-                    combinedData.push({
-                        type: "Press Release",
-                        img: `${API_PATH}/uploads/press-releases/${latestPress.press_release_picture}`,
-                        date: new Date(latestPress.press_release_date).toLocaleDateString("en-GB"),
-                        text: latestPress.press_release_heading,
-                        link: latestPress.press_release_content?.match(/https?:\/\/[^\s]+/)?.[0] || "#",
-                    });
+               if (latestPress) {
+                combinedData.push({
+                    type: "Press Release",
+                    id: latestPress.id,
+                    img: `${API_PATH}/uploads/press-releases/${latestPress.press_release_picture}`,
+                    date: new Date(latestPress.press_release_date).toLocaleDateString("en-GB"),
+                    text: latestPress.press_release_heading,
+                    slug: createSlug(latestPress.press_release_heading),
+                    link: `/press-release-details/${createSlug(
+                    latestPress.press_release_heading
+                    )}`,
+                });
                 }
+
 
                 if (latestCase) {
                     combinedData.push({
                         type: "Case Study",
+                        id: latestCase.id,
                         img: `${API_PATH}/uploads/blogs/${latestCase.blog_inner_image}`,
                         date: new Date(latestCase.blog_date).toLocaleDateString("en-GB"),
                         text: latestCase.sub_heading,
-                        link: latestCase.content?.match(/https?:\/\/[^\s]+/)?.[0] || "#",
+                        // link: latestCase.content?.match(/https?:\/\/[^\s]+/)?.[0] || "#",
+                        slug: createSlug(latestCase.sub_heading),
+                        link: `/case-studie-details/${createSlug(
+                        latestCase.sub_heading
+                        )}`,
                     });
                 }
 
                 if (latestBlog) {
                     combinedData.push({
                         type: "Blog",
+                        id: latestBlog.id,
                         img: `${API_PATH}/uploads/blogs/${latestBlog.blog_inner_image}`,
                         date: new Date(latestBlog.blog_date).toLocaleDateString("en-GB"),
                         text: latestBlog.sub_heading,
-                        link: latestBlog.content?.match(/https?:\/\/[^\s]+/)?.[0] || "#",
+                        // link: latestBlog.content?.match(/https?:\/\/[^\s]+/)?.[0] || "#",
+                        slug: createSlug(latestBlog.sub_heading),
+                        link: `/blog-detail/${createSlug(
+                        latestBlog.sub_heading
+                        )}`,
                     });
                 }
 
                 if (latestMedia) {
                     combinedData.push({
                         type: "Media Coverage",
+                        id: latestMedia.id,
                         img: `${API_PATH}/uploads/press-releases/${latestMedia.press_release_picture}`,
                         date: new Date(latestMedia.press_release_date).toLocaleDateString("en-GB"),
                         text: latestMedia.press_release_heading,
-                        link: latestMedia.press_release_content?.match(/https?:\/\/[^\s]+/)?.[0] || "#",
+                        // link: latestMedia.press_release_content?.match(/https?:\/\/[^\s]+/)?.[0] || "#",
+                        slug: createSlug(latestMedia.press_release_heading),
+                        link: `/media-detail/${createSlug(
+                        latestMedia.press_release_heading
+                        )}`,
                     });
                 }
 
@@ -437,7 +460,7 @@ export default function Home() {
                         </div>
                         <div className="row g-5 custom-row-css">
                             {businesses.map((business, index) => (
-                                <div key={business.id} className="col-md-6 col-lg-3 col-6">
+                                <div key={business.id} className="col-md-6 col-lg-3 col-12 custom-v-m-i">
                                     <Link
                                         to={
                                             business.card_url
@@ -547,7 +570,7 @@ export default function Home() {
 
                                 <div className="d-flex align-items-end justify-content-between">
                                     <div className="btn-design-new mt-3">
-                                        <a href="/business/pre-development" className="custom-btn">
+                                        <a href="/culture" className="custom-btn">
                                             Read More
                                         </a>
                                         <svg
@@ -614,7 +637,7 @@ export default function Home() {
                         </div>
 
                         <div className="btn-design d-flex justify-content-center align-items-center gap-2">
-                            <a href="/culture" className="custom-btn">
+                            <a href="/about-us/project-portfolio" className="custom-btn">
                                 View Our Portfolio
                             </a>
                             <svg
@@ -792,14 +815,13 @@ export default function Home() {
                                                 </p>
                                                 <p className="content-news-para">{item.text}</p>
                                                 <div className="btn-design-new">
-                                                    <a
-                                                        href={item.link}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
+                                                    <Link
+                                                        to={item.link}
+                                                        state={{ id: item.id }}
                                                         className="custom-btn"
                                                     >
                                                         Read More
-                                                    </a>
+                                                    </Link>
                                                     <svg
                                                         viewBox="-19.04 0 75.804 75.804"
                                                         xmlns="http://www.w3.org/2000/svg"

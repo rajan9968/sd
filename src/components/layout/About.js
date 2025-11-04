@@ -6,6 +6,7 @@ import API_PATH from "../../api/apiPath";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import api from "../../api/axiosInstance";
 import axios from "axios";
@@ -183,6 +184,16 @@ export default function About() {
         fetchMappingData();
     }, []);
 
+
+// Add this state at the top of your component
+const [swiperKey, setSwiperKey] = useState(0);
+
+// Add this useEffect to reinitialize Swiper when coreValues loads
+useEffect(() => {
+    if (coreValues && coreValues.length > 0) {
+        setSwiperKey(prev => prev + 1);
+    }
+}, [coreValues]);
     return (
         <div>
             <Header />
@@ -216,35 +227,29 @@ export default function About() {
                         <div className="text-center mb-5">
                             <h2 className="section-title">Overview</h2>
                         </div>
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="power-img">
-                                    <img
-                                        src="/assets/images/join-1.png"
-                                        className="img-fluid w-100 rounded"
-                                        alt="Team working together"
-                                    />
-                                </div>
-                            </div>
-                            <div className="col-lg-6 d-flex flex-column justify-content-between">
-                                <div className="power-content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                                        volutpat.
-                                    </p>
-                                    <p>
-                                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                                        suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                                    </p>
-                                </div>
-                                <div className="d-flex align-items-end justify-content-end">
-                                    <div className="group-icon">
-                                        <img src="/assets/images/Group-icon.png" alt="Decorative group icon" />
-                                    </div>
-                                </div>
+                       <div className="row">
+                    <div className="col-lg-6">
+                        <div className="power-img">
+                            <img
+                                src={overview.image || "/assets/images/join-1.png"}  // ✅ fallback if API not loaded
+                                className="img-fluid w-100 rounded"
+                                alt={overview.subHeading || "Team working together"}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="col-lg-6 d-flex flex-column justify-content-between">
+                        <div className="power-content">
+                            <p>{overview.subHeading || "Loading..."}</p> {/* ✅ dynamic text */}
+                        </div>
+                        <div className="d-flex align-items-end justify-content-end">
+                            <div className="group-icon">
+                                <img src="/assets/images/Group-icon.png" alt="Decorative group icon" />
                             </div>
                         </div>
+                    </div>
+                </div>
+
                     </div>
                 </section>
 
@@ -253,7 +258,7 @@ export default function About() {
                     <div className="container-fluid plr">
                         <div className="row g-5">
                             {purposes.map((item) => (
-                                <div className="col-md-6 col-lg-4 col-6" key={item.id}>
+                                <div className="col-md-6 col-lg-4 col-12 custom-v-m-i" key={item.id}>
                                     <div className="card-custom about-card-second text-center">
                                         <img
                                             src={getIcon(item.purpose_type)}
@@ -276,69 +281,74 @@ export default function About() {
                             <h2 className="section-title">Core Values</h2>
                         </div>
 
-                        <div id="new-carousel" style={{ position: 'relative' }}>
-                            <div className="swiper-button-prev"></div>
-                            <div className="swiper-button-next"></div>
+                      <div id="new-carousel" style={{ position: 'relative' }}>
+    <div className="swiper-button-prev"></div>
+    <div className="swiper-button-next"></div>
 
-                            <Swiper
-                                className="news-swiper"
-                                modules={[Navigation, Autoplay]}
-                                spaceBetween={20}
-                                slidesPerView={4}
-                                autoplay={{
-                                    delay: 2000,
-                                    disableOnInteraction: false,
-                                }}
-                                navigation={{
-                                    prevEl: '.swiper-button-prev',
-                                    nextEl: '.swiper-button-next',
-                                }}
-                                loop={true}
-                                breakpoints={{
-                                    0: { slidesPerView: 2 },
-                                    576: { slidesPerView: 2 },
-                                    992: { slidesPerView: 4 },
-                                }}
-                            >
-                                {coreValues.map((item) => {
-                                    const iconSrc = iconMap[item.sub_heading?.trim()] || "/assets/images/default-icon.png";
-                                    const bannerImg = item.banner_image
-                                        ? `https://datta-infra.wpdevstudio.site/uploads/our-culture/${item.banner_image}`
-                                        : null;
+    <Swiper
+        key={swiperKey} // Force re-render when data loads
+        className="news-swiper"
+        modules={[Navigation, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={4}
+        autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+        }}
+        navigation={{
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+        }}
+        loop={true}
+        observer={true}
+        observeParents={true}
+        watchOverflow={true}
+        breakpoints={{
+            0: { slidesPerView: 1 },
+            576: { slidesPerView: 2 },
+            992: { slidesPerView: 4 },
+        }}
+    >
+        {coreValues.map((item) => {
+            const iconSrc = iconMap[item.sub_heading?.trim()] || "/assets/images/default-icon.png";
+            const bannerImg = item.banner_image
+                ? `https://datta-infra.wpdevstudio.site/uploads/our-culture/${item.banner_image}`
+                : null;
 
-                                    return (
-                                        <SwiperSlide key={item.id}>
-                                            <div
-                                                className="col-md-6 col-lg-12 col-12"
-                                                onMouseEnter={() => setHoveredId(item.id)}
-                                                onMouseLeave={() => setHoveredId(null)}
-                                            >
-                                                <div
-                                                    className="card-custom about-core-card-h"
-                                                    style={{
-                                                        backgroundImage:
-                                                            hoveredId === item.id && bannerImg
-                                                                ? `url(${bannerImg})`
-                                                                : "none",
-                                                        backgroundSize: "cover",
-                                                        backgroundPosition: "center",
-                                                        transition: "all 0.3s ease",
-                                                        transform:
-                                                            hoveredId === item.id ? "scale(1)" : "scale(1)",
-                                                        filter:
-                                                            hoveredId === item.id ? "brightness(1.1)" : "brightness(1)",
-                                                    }}
-                                                >
-                                                    <img src={iconSrc} className="card-image about-core-icon" alt={item.sub_heading} />
-                                                    <h3>{item.sub_heading}</h3>
-                                                    <p>{item.content}</p>
-                                                </div>
-                                            </div>
-                                        </SwiperSlide>
-                                    );
-                                })}
-                            </Swiper>
+            return (
+                <SwiperSlide key={item.id}>
+                    <div
+                        className="col-md-6 col-lg-12 col-12 custom-v-m-i"
+                        onMouseEnter={() => setHoveredId(item.id)}
+                        onMouseLeave={() => setHoveredId(null)}
+                    >
+                        <div
+                            className="card-custom about-core-card-h"
+                            style={{
+                                backgroundImage:
+                                    hoveredId === item.id && bannerImg
+                                        ? `url(${bannerImg})`
+                                        : "none",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                transition: "all 0.3s ease",
+                                transform:
+                                hoveredId === item.id ? "scale(1)" : "scale(1)",
+                                filter:
+                                    hoveredId === item.id ? "brightness(1.1)" : "brightness(1)",
+                            }}
+                        >
+                            <img src={iconSrc} className="card-image about-core-icon" alt={item.sub_heading} />
+                            <h3>{item.sub_heading}</h3>
+                            <p>{item.content}</p>
                         </div>
+                    </div>
+                </SwiperSlide>
+            );
+        })}
+    </Swiper>
+</div>
                     </div>
                 </section>
                 <section className="timeline-banner">

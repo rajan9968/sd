@@ -28,7 +28,14 @@ const Careers = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+const [swiperKey, setSwiperKey] = useState(0);
 
+// Add this useEffect to reinitialize Swiper when whyJoin loads
+useEffect(() => {
+    if (whyJoin && whyJoin.length > 0) {
+        setSwiperKey(prev => prev + 1);
+    }
+}, [whyJoin]);
     useEffect(() => {
         const fetchCareersData = async () => {
             try {
@@ -177,43 +184,51 @@ const Careers = () => {
                             <h2 className="section-title">Why Join Datta Infra?</h2>
                         </div>
 
-                        <div className="row px-4" id="new-carousel" style={{ position: "relative" }}>
-                            <div className="swiper-button-prev"></div>
-                            <div className="swiper-button-next"></div>
+                       <div className="row px-4" id="new-carousel" style={{ position: "relative" }}>
+    <div className="swiper-button-prev"></div>
+    <div className="swiper-button-next"></div>
 
-                            <Swiper
-                                className="news-swiper"
-                                modules={[Navigation, Autoplay]}
-                                spaceBetween={20}
-                                slidesPerView={4}
-                                navigation={{
-                                    prevEl: ".swiper-button-prev",
-                                    nextEl: ".swiper-button-next",
-                                }}
-                                loop={true}
-                                breakpoints={{
-                                    0: { slidesPerView: 1 },
-                                    576: { slidesPerView: 2 },
-                                    992: { slidesPerView: 4 },
-                                }}
-                            >
-                                {whyJoin.map((item, index) => (
-                                    <SwiperSlide key={index}>
-                                        <div className="card-custom custom-carerr-mobile">
-                                            {item.icon && (
-                                                <img
-                                                    src={`${API_PATH}/uploads/careers/${item.icon}`}
-                                                    className="card-image custom-carerr-icon"
-                                                    alt={item.heading}
-                                                />
-                                            )}
-                                            <h3>{item.heading}</h3>
-                                            <p>{item.text}</p>
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
+    <Swiper
+        key={swiperKey}
+        className="news-swiper"
+        modules={[Navigation, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={4}
+        autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+        }}
+        navigation={{
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+        }}
+        loop={true}
+        observer={true}
+        observeParents={true}
+        watchOverflow={true}
+        breakpoints={{
+            0: { slidesPerView: 1 },
+            576: { slidesPerView: 2 },
+            992: { slidesPerView: 4 },
+        }}
+    >
+        {whyJoin.map((item, index) => (
+            <SwiperSlide key={index}>
+                <div className="card-custom custom-carerr-mobile">
+                    {item.icon && (
+                        <img
+                            src={`${API_PATH}/uploads/careers/${item.icon}`}
+                            className="card-image custom-carerr-icon"
+                            alt={item.heading}
+                        />
+                    )}
+                    <h3>{item.heading}</h3>
+                    <p>{item.text}</p>
+                </div>
+            </SwiperSlide>
+        ))}
+    </Swiper>
+</div>
                     </div>
                 </section>
 

@@ -1343,6 +1343,21 @@
     .trusted-logos {
         margin-top: 2em;
     }
+    .custom-v-m-i .card-custom{
+        zoom:100%;
+    }
+    .card-custom p {
+    font-size: 1.1em!important;
+}
+    .card-custom h3 {
+    font-size: 1.3em!important;
+}
+.contact-btn{
+        margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+.of-lo{
+    padding-top: 0 !important;}
 
     .social-icons {
         justify-content: space-between !important;
@@ -2692,7 +2707,7 @@
 
 @media only screen and (max-width: 480px) {
     .top-banner {
-        height: 29em;
+        height: 29em!important;
     }
 
     .custom-ali {
@@ -2754,7 +2769,7 @@
     }
 
     .slide {
-        background-position: right;
+        background-position: left;
         height: 87%;
     }
 

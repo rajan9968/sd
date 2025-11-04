@@ -277,21 +277,15 @@ export default function Culture() {
                                                 <img
                                                     src={item.icon}
                                                     alt={item.location}
-                                                    style={{ maxWidth: "100%" }}
+                                                    className="custom-size-image"
+                                                    style={{ maxWidth: "100%",objectFit:"cover" }}
                                                 />
                                             </div>
                                             <div>
                                                 <div className="history-content">
-                                                    {(() => {
-                                                        const words = item.title.trim().split(" ");
-                                                        const lastWord = words.pop(); // remove the last word
-                                                        const firstPart = words.join(" "); // join remaining words
-                                                        return (
-                                                            <p>
-                                                                {firstPart} <br /> {lastWord}
-                                                            </p>
-                                                        );
-                                                    })()}
+                                                     <p>
+                                                        {item.title}
+                                                    </p>
                                                 </div>
 
                                                 <div className="number-part">

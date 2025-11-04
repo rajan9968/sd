@@ -139,7 +139,7 @@ export default function Contact() {
                 </section>
 
                 {/* ---------- Office Location Section ---------- */}
-                <section className="powering-progres pb-5 pt-5">
+                <section className="powering-progres of-lo pb-5 pt-5">
                     <div className="container-fluid plr">
                         <div className="text-center mb-5">
                             <h2 className="section-title">Office Locations</h2>
