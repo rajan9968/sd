@@ -199,7 +199,7 @@ export default function Contact() {
                             </div>
 
                             <div className="d-flex justify-content-center contact-btn pb-5 my-5">
-                                <button type="submit" className="btn btn-design">
+                                <button type="submit" className="btn btn-design" style={{ position: "unset" }}>
                                     Submit
                                 </button>
                             </div>
@@ -243,3 +243,4 @@ export default function Contact() {
         </div>
     )
 }
+
