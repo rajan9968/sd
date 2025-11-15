@@ -28,14 +28,14 @@ const Careers = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-const [swiperKey, setSwiperKey] = useState(0);
+    const [swiperKey, setSwiperKey] = useState(0);
 
-// Add this useEffect to reinitialize Swiper when whyJoin loads
-useEffect(() => {
-    if (whyJoin && whyJoin.length > 0) {
-        setSwiperKey(prev => prev + 1);
-    }
-}, [whyJoin]);
+    // Add this useEffect to reinitialize Swiper when whyJoin loads
+    useEffect(() => {
+        if (whyJoin && whyJoin.length > 0) {
+            setSwiperKey(prev => prev + 1);
+        }
+    }, [whyJoin]);
     useEffect(() => {
         const fetchCareersData = async () => {
             try {
@@ -167,11 +167,11 @@ useEffect(() => {
                                 <h2 className="font-weight-bold">Work with Us</h2>
                             </div>
                             <div className="d-flex justify-content-center mt-1">
-                                <div className="btn btn-design">
-                                    <Link to="/press-release-details" className="custom-btn">
+                                    <Link to="https://dattapower.keka.com/careers/" target="_blank" className="custom-btn">
+                                           <div className="btn btn-design">
                                         View Latest Jobs
-                                    </Link>
-                                </div>
+                                    </div>
+                                 </Link>
                             </div>
                         </div>
                     </div>
@@ -184,51 +184,51 @@ useEffect(() => {
                             <h2 className="section-title">Why Join Datta Infra?</h2>
                         </div>
 
-                       <div className="row px-4" id="new-carousel" style={{ position: "relative" }}>
-    <div className="swiper-button-prev"></div>
-    <div className="swiper-button-next"></div>
+                        <div className="row px-4" id="new-carousel" style={{ position: "relative" }}>
+                            <div className="swiper-button-prev"></div>
+                            <div className="swiper-button-next"></div>
 
-    <Swiper
-        key={swiperKey}
-        className="news-swiper"
-        modules={[Navigation, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={4}
-        autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-        }}
-        navigation={{
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-        }}
-        loop={true}
-        observer={true}
-        observeParents={true}
-        watchOverflow={true}
-        breakpoints={{
-            0: { slidesPerView: 1 },
-            576: { slidesPerView: 2 },
-            992: { slidesPerView: 4 },
-        }}
-    >
-        {whyJoin.map((item, index) => (
-            <SwiperSlide key={index}>
-                <div className="card-custom custom-carerr-mobile">
-                    {item.icon && (
-                        <img
-                            src={`${API_PATH}/uploads/careers/${item.icon}`}
-                            className="card-image custom-carerr-icon"
-                            alt={item.heading}
-                        />
-                    )}
-                    <h3>{item.heading}</h3>
-                    <p>{item.text}</p>
-                </div>
-            </SwiperSlide>
-        ))}
-    </Swiper>
-</div>
+                            <Swiper
+                                key={swiperKey}
+                                className="news-swiper"
+                                modules={[Navigation, Autoplay]}
+                                spaceBetween={20}
+                                slidesPerView={4}
+                                autoplay={{
+                                    delay: 2000,
+                                    disableOnInteraction: false,
+                                }}
+                                navigation={{
+                                    prevEl: ".swiper-button-prev",
+                                    nextEl: ".swiper-button-next",
+                                }}
+                                loop={true}
+                                observer={true}
+                                observeParents={true}
+                                watchOverflow={true}
+                                breakpoints={{
+                                    0: { slidesPerView: 1 },
+                                    576: { slidesPerView: 2 },
+                                    992: { slidesPerView: 4 },
+                                }}
+                            >
+                                {whyJoin.map((item, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div className="card-custom custom-carerr-mobile">
+                                            {item.icon && (
+                                                <img
+                                                    src={`${API_PATH}/uploads/careers/${item.icon}`}
+                                                    className="card-image custom-carerr-icon"
+                                                    alt={item.heading}
+                                                />
+                                            )}
+                                            <h3>{item.heading}</h3>
+                                            <p>{item.text}</p>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
                     </div>
                 </section>
 
@@ -291,7 +291,7 @@ useEffect(() => {
                                                     src={
                                                         item.thumbnail
                                                             ? `${API_PATH}/uploads/portfolio-images/${item.thumbnail}`
-                                                            : "assets/images/test-1.png"
+                                                            : "assets/images/Youtube.jpg"
                                                     }
                                                     alt={`Testimonial ${index + 1}`}
                                                     className="img-fluid desktop-banner rounded w-75"
@@ -344,7 +344,7 @@ useEffect(() => {
                                 <div className="d-flex justify-content-center gap-3 align-items-center text-center">
                                     <h2>Be a part of Datta Infra</h2>
                                     <div className="btn-design-new">
-                                        <a href="#" className="custom-btn">Apply Now</a>
+                                        <a href="https://dattapower.keka.com/careers/" target="_blank" className="custom-btn">Apply Now</a>
                                         <svg viewBox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff">
                                             <g transform="translate(-831.568 -384.448)">
                                                 <path

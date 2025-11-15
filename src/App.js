@@ -211,6 +211,7 @@ const ListHeadingSubCat = React.lazy(() => import('./components/admin2/views/pag
 const AddHeadingDataCat = React.lazy(() => import('./components/admin2/views/pages/Category/Data/AddHeadingCat'))
 const EditHeadingDataCat = React.lazy(() => import('./components/admin2/views/pages/Category/Data/EditHeadingCat'))
 const ListHeadingDataCat = React.lazy(() => import('./components/admin2/views/pages/Category/Data/ListHeadingCat'))
+const Logout = React.lazy(() => import('./components/admin2/views/pages/login/logout'))
 
 
 const App = () => {
@@ -262,8 +263,8 @@ const App = () => {
             <Route path="/awards" element={<Awards />} />
             <Route path="/culture" element={<Culture />} />
             <Route path="/faqs" element={<Faqs />} />
-            <Route path="/business/pre-development" element={<PreDevelopment />} />
-            <Route path="/business/epc-project" element={<EPCProject />} />
+            <Route path="/business/pre-development-epc" element={<PreDevelopment />} />
+            <Route path="/business/turnkey-epc-projects" element={<EPCProject />} />
             <Route path="/business/grid-infrastructure" element={<GridInfrastructure />} />
             <Route path="/business/independent-power-producer" element={<Independent />} />
             <Route path="/careers" element={<Career />} />
@@ -442,6 +443,8 @@ const App = () => {
             <Route path="/admin/investors-list" element={<ListHeadingDataCat />} />
             <Route path="/admin/add-investors" element={< AddHeadingDataCat />} />
             <Route path="/admin/edit-investors" element={<EditHeadingDataCat />} />
+            {/* logout  */}
+            <Route path="/admin/logout" element={<Logout />} />
 
           </Routes>
         </Suspense>

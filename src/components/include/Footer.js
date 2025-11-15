@@ -80,7 +80,7 @@ export default function Footer() {
                                     <h5>
                                         <Link to="/culture" className="text-decoration-none text-white">Culture</Link>
                                     </h5>
-                                    <h5>
+                                    <h5 className='d-none'>
                                         <Link to="/investors" className="text-decoration-none text-white">Investor</Link>
                                     </h5>
                                     <h5>
@@ -105,7 +105,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <img src="/assets/images/phone-icon.png" alt="" srcSet="" />
-                                        <a href="tel:+">+91-124-448-8852</a>
+                                        <a href="tel:+911244529332">+91 1244529332</a>
                                     </li>
                                     <li>
                                         <img src="/assets/images/mail-icon.png" alt="" srcSet="" />
@@ -143,7 +143,7 @@ export default function Footer() {
                         </div>
                         <div className="row border-top copy-section">
                             <div className="col-lg-7">
-                                <p className='text-white'> Copyright © 2025 DIPL. All rights reserved.</p>
+                                <p className='text-white'> Copyright © 2025 DPIPL. All rights reserved.</p>
                             </div>
                             <div className="col-lg-5 copy-list">
                                 <Link className="text-decoration-none text-white">

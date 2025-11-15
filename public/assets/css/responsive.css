@@ -1338,6 +1338,67 @@
 
 }
 
+/*Iphone*/
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 430px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+   .leadership-banner-caption span, .about-banner-caption span {
+    font-size: 0.2em;
+
+}
+.slide-title {
+    font-size: 1.3em;
+}
+.stat-label {
+    line-height: 24px;
+}
+.stat-number {
+    font-size: 1.1em;
+}
+.stat-item span{
+    font-size: 0.8em;
+}
+.custom-fa {
+    align-items: center;
+}
+.ready .btn-design-new {
+    align-items: center;
+}
+.btn-design-new, .btn-design{
+    font-size: 0.8em;
+}
+
+.btn-design{
+    width: 55%!important;
+}
+.content-text h3 {
+    font-size: 1.4em!important;
+}
+.work-with-us-card h2 {
+    font-size: 1.1em;
+}
+.work-with-us-card {
+    max-width: 310px!important;
+    padding: 21px 1px !important;
+}
+.work-with-us-card .btn-design a{
+    font-size: 7px!important;
+
+}
+
+.work-with-us-card h2 {
+    font-size: 0.8em;
+ }
+ .offcanvas-links li{
+      font-size: 0.6em;
+ }
+ .offcanvas.hiding, .offcanvas.show, .offcanvas.showing {
+     height: 1000px!important;
+}
+}
+
 /* 676 7686  */
 @media (max-width: 768px) {
     .trusted-logos {

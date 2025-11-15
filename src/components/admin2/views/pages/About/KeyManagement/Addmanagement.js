@@ -208,7 +208,7 @@ export default function AddKeyManagement() {
                                     onChange={handleChange}
                                 >
                                     <option value="Key Management">Key Management</option>
-                                    <option value="Board of Directors">Board of Directors</option>
+                                    <option value="Advisors">Advisors</option>
                                     <option value="Head of Department">Head of Department</option>
                                 </CFormSelect>
                             </CCol>

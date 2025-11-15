@@ -102,9 +102,8 @@ export default function Leadership() {
 
                 <section className="leader-section py-5">
                     <div className="container-fluid plr">
-                        {/* Tabs */}
                         <ul className="nav nav-pills mb-3 position-unset" id="pills-tab" role="tablist">
-                            {["Key Management", "Board of Directors", "Head of Department"].map((tab) => (
+                            {["Key Management", "Advisors", "Head of Department"].map((tab) => (
                                 <li className="nav-item" role="presentation" key={tab}>
                                     <button
                                         className={`nav-link ${activeTab === tab ? "active" : ""}`}
@@ -116,6 +115,8 @@ export default function Leadership() {
                                 </li>
                             ))}
                         </ul>
+
+
 
                         {/* Tab Content */}
                         <div className="tab-content mt-4">

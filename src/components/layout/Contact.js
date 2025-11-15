@@ -9,11 +9,13 @@ import API_PATH from "../../api/apiPath";
 
 export default function Contact() {
     const [contactData, setContactData] = useState(null);
+    const [captchaValue, setCaptchaValue] = useState(null);
 
     const [formData, setFormData] = useState({
         firstName: "",
         email: "",
         contactNo: "",
+        queryType: "",
         companyName: "",
         message: "",
     });
@@ -32,27 +34,50 @@ export default function Contact() {
 
         fetchContactData();
     }, []);
-    const [captchaValue, setCaptchaValue] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
     const handleCaptcha = (value) => {
         setCaptchaValue(value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!captchaValue) {
-            alert("Please verify that you are not a robot.");
-            return;
+
+        // Optional: enable captcha if you’re using it
+        // if (!captchaValue) {
+        //     alert("Please verify that you are not a robot.");
+        //     return;
+        // }
+
+        try {
+            // Send form data to backend API
+            const response = await api.post("/mail/contact", formData);
+
+            if (response.data.success) {
+                // alert("✅ Message sent successfully!");
+                // console.log("Response:", response.data);
+
+                // Reset form after success
+                setFormData({
+                    firstName: "",
+                    email: "",
+                    contactNo: "",
+                    companyName: "",
+                    message: "",
+                });
+            } else {
+                alert("❌ Failed to send message. Please try again later.");
+            }
+        } catch (error) {
+            console.error("Error sending message:", error);
+            alert("⚠️ Something went wrong while sending your message.");
         }
-        console.log(formData);
-        alert("Form submitted!");
-        // Send form data to your backend here
     };
+
     return (
         <div>
             <Header />
@@ -97,49 +122,93 @@ export default function Contact() {
                         <form className="contect-form" onSubmit={handleSubmit}>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label my-2">Full Name</label>
-                                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="form-control" placeholder="Enter your Full name" required />
+                                    <label className="form-label">Full Name</label>
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+                                        className="form-control"
+                                        placeholder="Enter your full name"
+                                        required
+                                    />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label my-2">Email Address</label>
-                                    <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" placeholder="Enter your email" required />
+                                    <label className="form-label">Email Address</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        className="form-control"
+                                        placeholder="Enter your email"
+                                        required
+                                    />
                                 </div>
                             </div>
+
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label my-2">Contact No</label>
-                                    <input type="text" name="contactNo" value={formData.contactNo} onChange={handleChange} className="form-control" placeholder="Enter contact number" />
+                                    <label className="form-label">Contact No</label>
+                                    <input
+                                        type="text"
+                                        name="contactNo"
+                                        value={formData.contactNo}
+                                        onChange={handleChange}
+                                        className="form-control"
+                                        placeholder="Enter contact number"
+                                    />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label my-2">Type of Query</label>
-                                    <select className="form-control">
-                                        <option>Select</option>
-                                        <option value="1">General </option>
-                                        <option value="2">Business Related</option>
-                                        <option value="3">Career Related</option>
-                                        <option value="3">Investor Related</option>
-                                        <option value="3">Others</option>
+                                    <label className="form-label">Type of Query</label>
+                                    <select
+                                        name="queryType"
+                                        value={formData.queryType}
+                                        onChange={handleChange}
+                                        className="form-control"
+                                    >
+                                        <option value="">Select</option>
+                                        <option value="General">General</option>
+                                        <option value="Business">Business Related</option>
+                                        <option value="Career">Career Related</option>
+                                        <option value="Investor">Investor Related</option>
+                                        <option value="Others">Others</option>
                                     </select>
                                 </div>
                             </div>
+
                             <div className="row mb-3">
                                 <div className="col-md-8">
-                                    <label className="form-label my-2">Remark / Message*</label>
-                                    <textarea name="message" value={formData.message} onChange={handleChange} className="form-control" placeholder="Enter your message" rows="4" required >
-
-                                    </textarea>
+                                    <label className="form-label">Remark / Message*</label>
+                                    <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        className="form-control"
+                                        placeholder="Enter your message"
+                                        rows="4"
+                                        required
+                                    ></textarea>
                                 </div>
-                                <div className="col-md-4 d-flex align-items-center my-2">
-                                    <ReCAPTCHA sitekey="YOUR_RECAPTCHA_SITE_KEY" onChange={handleCaptcha} />
+                                <div className="col-md-4 d-flex align-items-center">
+                                    <ReCAPTCHA
+                                        sitekey="6LcPMwUsAAAAALpR4hhZvtCC-ASgL5m5BMyRXi4n"
+                                        onChange={handleCaptcha}
+                                    />
                                 </div>
                             </div>
+
                             <div className="d-flex justify-content-center contact-btn pb-5 my-5">
-                                <div className="btn-design contact-submit-btn mb-5"> <Link to="#" className="custom-btn"> Submit </Link> </div> </div> </form>
+                                <button type="submit" className="btn btn-design">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </section>
 
                 {/* ---------- Office Location Section ---------- */}
-                <section className="powering-progres of-lo pb-5 pt-5">
+                <section className="powering-progres pb-5 pt-5">
                     <div className="container-fluid plr">
                         <div className="text-center mb-5">
                             <h2 className="section-title">Office Locations</h2>
@@ -166,7 +235,6 @@ export default function Contact() {
                                     title="Datta Power Infra Pvt Ltd Location"
                                 ></iframe>
                             </div>
-
                         </div>
                     </div>
                 </section>

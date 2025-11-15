@@ -259,7 +259,7 @@ export default function EPCProject() {
                 </section>
 
                 {/* ---------- Key Projects Section ---------- */}
-                <section className="join-us our-project py-5">
+                <section className="join-us our-project  d-none py-5">
                     <div className="container-fluid plr">
                         <div className="text-center mb-5">
                             <h2 className="section-title">Key Projects</h2>
